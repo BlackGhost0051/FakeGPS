@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Fake GPS</string>
+
+    <string name="open">open</string>
+    <string name="close">close</string>
 </resources>
