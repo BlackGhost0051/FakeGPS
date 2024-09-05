@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.blackghost.fakegps.Fragments.InfoFragment;
 import com.blackghost.fakegps.Fragments.MapFragment;
 import com.blackghost.fakegps.Fragments.SettingsFragment;
 import com.google.android.material.navigation.NavigationView;
@@ -46,14 +47,20 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 if (item.getItemId() == R.id.map) {
                     drawerLayout.closeDrawer(GravityCompat.START);
-                    toolbar.setTitle("Map");
+                    toolbar.setTitle(R.string.menu_map);
                     fragmentR(new MapFragment());
                     return true;
                 }
-                if (item.getItemId() == R.id.settings) {
+                else if (item.getItemId() == R.id.settings) {
                     drawerLayout.closeDrawer(GravityCompat.START);
-                    toolbar.setTitle("Settings");
+                    toolbar.setTitle(R.string.menu_settings);
                     fragmentR(new SettingsFragment());
+                    return true;
+                }
+                else if (item.getItemId() == R.id.info) {
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    toolbar.setTitle(R.string.menu_info);
+                    fragmentR(new InfoFragment());
                     return true;
                 }
                 return false;
