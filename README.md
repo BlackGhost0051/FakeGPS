@@ -1,7 +1,7 @@
 # Fake GPS
 
 ![](./app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp "Fake GPS")
-
+ 
 # Content
 
 # Documentation
