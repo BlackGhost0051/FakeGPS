@@ -1,9 +1,13 @@
 package com.blackghost.fakegps.Fragments;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -12,14 +16,19 @@ import android.view.ViewGroup;
 
 import com.blackghost.fakegps.Managers.FakeGPSManager;
 import com.blackghost.fakegps.R;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class MapFragment extends Fragment {
+public class MapFragment extends Fragment implements OnMapReadyCallback{
 
     private FakeGPSManager fakeGPSManager;
+
+    private GoogleMap mMap;
 
     public MapFragment(FakeGPSManager fakeGPSManager) {
         this.fakeGPSManager = fakeGPSManager;
@@ -44,7 +53,33 @@ public class MapFragment extends Fragment {
         // don't work if fragment destroyed | Need save location in FakeGPSManager | setGPS(lon lat) setLocation ???
         //setWaypointPath();
 
+
+        SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager()
+                .findFragmentById(R.id.map);
+        if (mapFragment != null) {
+            mapFragment.getMapAsync((OnMapReadyCallback) this);
+        }
+
         return view;
+    }
+
+    @Override
+    public void onMapReady(@NonNull GoogleMap googleMap) {
+        mMap = googleMap;
+
+        mMap.getUiSettings().setZoomControlsEnabled(true);
+
+        if (ActivityCompat.checkSelfPermission(getContext(),
+                Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                && ActivityCompat.checkSelfPermission(getContext(),
+                Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+
+            ActivityCompat.requestPermissions(getActivity(),
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
+            return;
+        }
+
+        mMap.setMyLocationEnabled(true);
     }
 
 
