@@ -10,6 +10,10 @@
             android:icon="@drawable/map_24"
             android:title="@string/menu_map"
             />
+        <item
+            android:id="@+id/script"
+            android:title="@string/menu_script"
+            />
 
 
         <item android:title="App">

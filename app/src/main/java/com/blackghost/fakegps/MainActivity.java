@@ -16,6 +16,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.blackghost.fakegps.Fragments.InfoFragment;
 import com.blackghost.fakegps.Fragments.MapFragment;
+import com.blackghost.fakegps.Fragments.ScriptFragment;
 import com.blackghost.fakegps.Fragments.SettingsFragment;
 import com.blackghost.fakegps.Managers.FakeGPSManager;
 import com.google.android.material.navigation.NavigationView;
@@ -59,6 +60,12 @@ public class MainActivity extends AppCompatActivity {
                     drawerLayout.closeDrawer(GravityCompat.START);
                     toolbar.setTitle(R.string.menu_map);
                     fragmentR(new MapFragment(fakeGPSManager));
+                    return true;
+                }
+                else if (item.getItemId() == R.id.script) {
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                    toolbar.setTitle(R.string.menu_script);
+                    fragmentR(new ScriptFragment());
                     return true;
                 }
                 else if (item.getItemId() == R.id.settings) {
