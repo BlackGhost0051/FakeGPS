@@ -2,6 +2,7 @@ package com.blackghost.fakegps;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -49,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
         fakeGPSManager = new FakeGPSManager(this);
 
-        fragmentR(new MapFragment(fakeGPSManager));
+        //fragmentR(new MapFragment(fakeGPSManager));
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -67,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 }
                 else if (item.getItemId() == R.id.info) {
+                    Toast.makeText(MainActivity.this, fakeGPSManager.getTest(), Toast.LENGTH_SHORT).show();
                     drawerLayout.closeDrawer(GravityCompat.START);
                     toolbar.setTitle(R.string.menu_info);
                     fragmentR(new InfoFragment());
