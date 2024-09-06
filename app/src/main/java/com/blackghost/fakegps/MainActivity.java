@@ -16,6 +16,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.blackghost.fakegps.Fragments.InfoFragment;
 import com.blackghost.fakegps.Fragments.MapFragment;
 import com.blackghost.fakegps.Fragments.SettingsFragment;
+import com.blackghost.fakegps.Managers.FakeGPSManager;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,7 +24,13 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private Toolbar toolbar;
     private NavigationView navigationView;
+    private FakeGPSManager fakeGPSManager;
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        fakeGPSManager.disableMockProvider();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +47,9 @@ public class MainActivity extends AppCompatActivity {
 
         toggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.black));
 
-        fragmentR(new MapFragment());
+        fakeGPSManager = new FakeGPSManager(this);
+
+        fragmentR(new MapFragment(fakeGPSManager));
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -48,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 if (item.getItemId() == R.id.map) {
                     drawerLayout.closeDrawer(GravityCompat.START);
                     toolbar.setTitle(R.string.menu_map);
-                    fragmentR(new MapFragment());
+                    fragmentR(new MapFragment(fakeGPSManager));
                     return true;
                 }
                 else if (item.getItemId() == R.id.settings) {
