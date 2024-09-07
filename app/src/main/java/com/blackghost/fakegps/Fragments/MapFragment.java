@@ -53,12 +53,11 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, MainAct
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_map, container, false);
 
-        fakeGPSManager.initializeMockProvider();
 
-        activityInterface.test();
+        activityInterface.setLocation();
 
 
-        fakeGPSManager.setLocation(36.1699, -115.1398, 5.0f); // Las Vegas
+        //fakeGPSManager.setLocation(36.1699, -115.1398, 5.0f); // Las Vegas
         // don't work if fragment destroyed | Need save location in FakeGPSManager | setGPS(lon lat) setLocation ???
         //setWaypointPath();
 
@@ -119,6 +118,11 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, MainAct
 
     @Override
     public void test() {
+
+    }
+
+    @Override
+    public void setLocation() {
 
     }
 }
