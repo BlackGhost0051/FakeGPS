@@ -47,7 +47,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback{
 
         fakeGPSManager.initializeMockProvider();
 
-        fakeGPSManager.setTest("TEST??????????????");
 
         fakeGPSManager.setLocation(36.1699, -115.1398, 5.0f); // Las Vegas
         // don't work if fragment destroyed | Need save location in FakeGPSManager | setGPS(lon lat) setLocation ???

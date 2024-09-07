@@ -8,13 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.blackghost.fakegps.Managers.FakeGPSManager;
 import com.blackghost.fakegps.R;
 
 public class ScriptFragment extends Fragment {
 
-
-    public ScriptFragment() {
-        // Required empty public constructor
+    FakeGPSManager fakeGPSManager;
+    public ScriptFragment(FakeGPSManager fakeGPSManager) {
+        this.fakeGPSManager = fakeGPSManager;
     }
 
 

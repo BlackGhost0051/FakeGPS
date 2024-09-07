@@ -13,18 +13,6 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class FakeGPSManager {
-
-    private String test = "TEST";
-
-    public String getTest() {
-        return test;
-    }
-
-    public void setTest(String test) {
-        this.test = test;
-    }
-
-
     private Context context;
     private LocationManager locationManager;
     private boolean isMockActive = false;

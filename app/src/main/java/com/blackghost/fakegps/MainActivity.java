@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                 else if (item.getItemId() == R.id.script) {
                     drawerLayout.closeDrawer(GravityCompat.START);
                     toolbar.setTitle(R.string.menu_script);
-                    fragmentR(new ScriptFragment());
+                    fragmentR(new ScriptFragment(fakeGPSManager));
                     return true;
                 }
                 else if (item.getItemId() == R.id.settings) {
@@ -75,7 +75,6 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 }
                 else if (item.getItemId() == R.id.info) {
-                    Toast.makeText(MainActivity.this, fakeGPSManager.getTest(), Toast.LENGTH_SHORT).show();
                     drawerLayout.closeDrawer(GravityCompat.START);
                     toolbar.setTitle(R.string.menu_info);
                     fragmentR(new InfoFragment());
