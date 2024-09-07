@@ -18,10 +18,11 @@ import com.blackghost.fakegps.Fragments.InfoFragment;
 import com.blackghost.fakegps.Fragments.MapFragment;
 import com.blackghost.fakegps.Fragments.ScriptFragment;
 import com.blackghost.fakegps.Fragments.SettingsFragment;
+import com.blackghost.fakegps.Interfaces.MainActivityInterface;
 import com.blackghost.fakegps.Managers.FakeGPSManager;
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements MainActivityInterface {
 
     private DrawerLayout drawerLayout;
     private Toolbar toolbar;
@@ -91,5 +92,10 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.frameLayout, fragment);
         fragmentTransaction.commit();
+    }
+
+    @Override
+    public void test() {
+        Toast.makeText(this, "TEST----IN", Toast.LENGTH_SHORT).show();
     }
 }

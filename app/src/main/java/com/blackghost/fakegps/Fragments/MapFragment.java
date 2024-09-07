@@ -1,6 +1,7 @@
 package com.blackghost.fakegps.Fragments;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationManager;
@@ -14,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.blackghost.fakegps.Interfaces.MainActivityInterface;
 import com.blackghost.fakegps.Managers.FakeGPSManager;
 import com.blackghost.fakegps.R;
 import com.google.android.gms.maps.GoogleMap;
@@ -24,16 +26,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class MapFragment extends Fragment implements OnMapReadyCallback{
+public class MapFragment extends Fragment implements OnMapReadyCallback, MainActivityInterface {
 
     private FakeGPSManager fakeGPSManager;
 
     private GoogleMap mMap;
+    private MainActivityInterface activityInterface;
 
     public MapFragment(FakeGPSManager fakeGPSManager) {
         this.fakeGPSManager = fakeGPSManager;
     }
 
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        activityInterface = (MainActivityInterface) context;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -46,6 +54,8 @@ public class MapFragment extends Fragment implements OnMapReadyCallback{
         View view = inflater.inflate(R.layout.fragment_map, container, false);
 
         fakeGPSManager.initializeMockProvider();
+
+        activityInterface.test();
 
 
         fakeGPSManager.setLocation(36.1699, -115.1398, 5.0f); // Las Vegas
@@ -105,5 +115,10 @@ public class MapFragment extends Fragment implements OnMapReadyCallback{
 
         long intervalMillis = 5000;
         fakeGPSManager.setWay(waypoints, intervalMillis);
+    }
+
+    @Override
+    public void test() {
+
     }
 }
