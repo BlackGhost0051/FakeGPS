@@ -12,6 +12,7 @@
             />
         <item
             android:id="@+id/script"
+            android:icon="@drawable/script_24"
             android:title="@string/menu_script"
             />
 
