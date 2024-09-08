@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityInter
 
     @Override
     public void setLocation() {
-        fakeGPSManager.setLocation(36.1699, -115.1398, 5.0f);
+        fakeGPSManager.setLocation(36.1699, -115.1398, 5.0f, 2500);
         Toast.makeText(this, "SetLocation", Toast.LENGTH_SHORT).show();
     }
 }

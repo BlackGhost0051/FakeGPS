@@ -60,20 +60,28 @@ public class FakeGPSManager {
         }
     }
 
-    public void setLocation(double latitude, double longitude, float accuracy) {
+    public void setLocation(double latitude, double longitude, float accuracy, long intervalMillis) {
         if (!isMockActive) {
             Log.e("FakeGPS", "Mock provider not active. Call initializeMockProvider() first.");
             return;
         }
 
-        Location mockLocation = createMockLocation(latitude, longitude, accuracy);
-        try {
-            locationManager.setTestProviderLocation(LocationManager.GPS_PROVIDER, mockLocation);
-            Log.d("FakeGPS", "Single mock location set: " + latitude + ", " + longitude);
-        } catch (SecurityException e) {
-            e.printStackTrace();
-            Log.e("FakeGPS", "Failed to set mock location", e);
-        }
+        stopTimer();
+
+        timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                Location mockLocation = createMockLocation(latitude, longitude, accuracy);
+                try {
+                    locationManager.setTestProviderLocation(LocationManager.GPS_PROVIDER, mockLocation);
+                    Log.d("FakeGPS", "Mock location updated: " + latitude + ", " + longitude);
+                } catch (SecurityException e) {
+                    e.printStackTrace();
+                    Log.e("FakeGPS", "Failed to update mock location", e);
+                }
+            }
+        }, 0, intervalMillis);
     }
 
     public void setWay(List<Location> waypoints, long intervalMillis) {
@@ -92,12 +100,12 @@ public class FakeGPSManager {
             public void run() {
                 if (index < waypoints.size() && isMockActive) {
                     Location waypoint = waypoints.get(index);
-                    setLocation(waypoint.getLatitude(), waypoint.getLongitude(), waypoint.getAccuracy());
+                    setLocation(waypoint.getLatitude(), waypoint.getLongitude(), waypoint.getAccuracy(), 5000);
                     index++;
                 } else if (index == waypoints.size()) {
                     // Stay at the last location !!!
                     Location lastWaypoint = waypoints.get(waypoints.size() - 1);
-                    setLocation(lastWaypoint.getLatitude(), lastWaypoint.getLongitude(), lastWaypoint.getAccuracy());
+                    setLocation(lastWaypoint.getLatitude(), lastWaypoint.getLongitude(), lastWaypoint.getAccuracy(), 5000);
                     Log.d("FakeGPS", "Staying at the last location: " + lastWaypoint.getLatitude() + ", " + lastWaypoint.getLongitude());
                     stopTimer();
                 }
