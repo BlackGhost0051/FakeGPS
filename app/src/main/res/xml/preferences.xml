@@ -4,4 +4,12 @@
     <CheckBoxPreference
         app:title="@string/app_name"
         />
+
+    <!--
+
+    1. Update the GPS time | default value 2500
+    2. Save last position zoom rotation in map | default value TRUE
+    3. Message ( Info about position ) | default value FALSE ?
+
+    -->
 </PreferenceScreen>
