@@ -1,14 +1,10 @@
 package com.blackghost.fakegps.Fragments;
 
-import android.Manifest;
 import android.content.Context;
-import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -85,7 +81,6 @@ public class MapFragment extends Fragment implements MainActivityInterface {
 
 
         //fakeGPSManager.setLocation(36.1699, -115.1398, 5.0f, 2500); // Las Vegas
-        // don't work if fr@Override
 
 
 
