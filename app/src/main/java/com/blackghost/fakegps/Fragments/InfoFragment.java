@@ -15,9 +15,7 @@ import com.blackghost.fakegps.R;
 
 
 public class InfoFragment extends Fragment {
-
-    private WebView webView;
-
+    
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,15 +26,6 @@ public class InfoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_info, container, false);
-
-        webView = view.findViewById(R.id.webView);
-
-        // Enable JS
-        WebSettings webSettings = webView.getSettings();
-        webSettings.setJavaScriptEnabled(true);
-
-        webView.setWebViewClient(new WebViewClient());
-        webView.loadUrl("file:///android_asset/info.html");
 
         return view;
     }
