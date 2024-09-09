@@ -18,19 +18,23 @@ import android.view.ViewGroup;
 import com.blackghost.fakegps.Interfaces.MainActivityInterface;
 import com.blackghost.fakegps.Managers.FakeGPSManager;
 import com.blackghost.fakegps.R;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
+
+
+import org.osmdroid.api.IMapController;
+import org.osmdroid.config.Configuration;
+import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
+import org.osmdroid.util.GeoPoint;
+import org.osmdroid.views.MapView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class MapFragment extends Fragment implements OnMapReadyCallback, MainActivityInterface {
+public class MapFragment extends Fragment implements MainActivityInterface {
 
     private FakeGPSManager fakeGPSManager;
 
-    private GoogleMap mMap;
+    private MapView mapView;
     private MainActivityInterface activityInterface;
 
     public MapFragment(FakeGPSManager fakeGPSManager) {
@@ -46,6 +50,19 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, MainAct
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Configuration.getInstance().setUserAgentValue(getActivity().getPackageName());
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        mapView.onResume();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        mapView.onPause();
     }
 
     @Override
@@ -53,42 +70,28 @@ public class MapFragment extends Fragment implements OnMapReadyCallback, MainAct
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_map, container, false);
 
+        mapView = view.findViewById(R.id.map);
+        mapView.setTileSource(TileSourceFactory.MAPNIK);
+
+        mapView.setBuiltInZoomControls(true);
+        mapView.setMultiTouchControls(true);
+
+        IMapController mapController = mapView.getController();
+        mapController.setZoom(9.5);
+        GeoPoint startPoint = new GeoPoint(36.1699, -115.1398); // Las Vegas
+        mapController.setCenter(startPoint);
 
         activityInterface.setLocation();
 
 
         //fakeGPSManager.setLocation(36.1699, -115.1398, 5.0f, 2500); // Las Vegas
-        // don't work if fragment destroyed | Need save location in FakeGPSManager | setGPS(lon lat) setLocation ???
-        //setWaypointPath();
+        // don't work if fr@Override
 
 
-        SupportMapFragment mapFragment = (SupportMapFragment) getChildFragmentManager()
-                .findFragmentById(R.id.map);
-        if (mapFragment != null) {
-            mapFragment.getMapAsync((OnMapReadyCallback) this);
-        }
 
         return view;
     }
 
-    @Override
-    public void onMapReady(@NonNull GoogleMap googleMap) {
-        mMap = googleMap;
-
-        mMap.getUiSettings().setZoomControlsEnabled(true);
-
-        if (ActivityCompat.checkSelfPermission(getContext(),
-                Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
-                && ActivityCompat.checkSelfPermission(getContext(),
-                Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-
-            ActivityCompat.requestPermissions(getActivity(),
-                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
-            return;
-        }
-
-        mMap.setMyLocationEnabled(true);
-    }
 
 
     private void setWaypointPath() {
