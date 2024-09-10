@@ -1,15 +1,19 @@
 package com.blackghost.fakegps.Fragments;
 
+import android.Manifest;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
 
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.blackghost.fakegps.Interfaces.MainActivityInterface;
 import com.blackghost.fakegps.Managers.FakeGPSManager;
@@ -21,6 +25,8 @@ import org.osmdroid.config.Configuration;
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
 import org.osmdroid.util.GeoPoint;
 import org.osmdroid.views.MapView;
+import org.osmdroid.views.overlay.mylocation.GpsMyLocationProvider;
+import org.osmdroid.views.overlay.mylocation.MyLocationNewOverlay;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,9 +34,11 @@ import java.util.List;
 
 public class MapFragment extends Fragment implements MainActivityInterface {
 
+    private MapView mapView;
+    private MyLocationNewOverlay myLocationOverlay;
+
     private FakeGPSManager fakeGPSManager;
 
-    private MapView mapView;
     private MainActivityInterface activityInterface;
 
     public MapFragment(FakeGPSManager fakeGPSManager) {
@@ -92,6 +100,21 @@ public class MapFragment extends Fragment implements MainActivityInterface {
 
         GeoPoint startPoint = new GeoPoint(36.1699, -115.1398); // Las Vegas
         mapController.setCenter(startPoint);
+
+        myLocationOverlay = new MyLocationNewOverlay(new GpsMyLocationProvider(getContext()), mapView);
+        myLocationOverlay.enableMyLocation();
+
+        mapView.getOverlays().add(myLocationOverlay);
+
+        if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                && ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+
+            ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
+            Toast.makeText(getActivity(), "N", Toast.LENGTH_SHORT).show();
+
+        } else {
+            Toast.makeText(getActivity(), "Y", Toast.LENGTH_SHORT).show();
+        }
     }
 
 
