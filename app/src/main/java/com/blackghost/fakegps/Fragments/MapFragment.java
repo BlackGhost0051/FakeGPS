@@ -67,15 +67,8 @@ public class MapFragment extends Fragment implements MainActivityInterface {
         View view = inflater.inflate(R.layout.fragment_map, container, false);
 
         mapView = view.findViewById(R.id.map);
-        mapView.setTileSource(TileSourceFactory.MAPNIK);
 
-        mapView.setBuiltInZoomControls(true);
-        mapView.setMultiTouchControls(true);
-
-        IMapController mapController = mapView.getController();
-        mapController.setZoom(9.5);
-        GeoPoint startPoint = new GeoPoint(36.1699, -115.1398); // Las Vegas
-        mapController.setCenter(startPoint);
+        loadMap();
 
         activityInterface.setLocation();
 
@@ -85,6 +78,20 @@ public class MapFragment extends Fragment implements MainActivityInterface {
 
 
         return view;
+    }
+
+    private void loadMap(){
+
+        mapView.setTileSource(TileSourceFactory.MAPNIK);
+
+        mapView.setBuiltInZoomControls(true);
+        mapView.setMultiTouchControls(true);
+
+        IMapController mapController = mapView.getController();
+        mapController.setZoom(9.5);
+
+        GeoPoint startPoint = new GeoPoint(36.1699, -115.1398); // Las Vegas
+        mapController.setCenter(startPoint);
     }
 
 
