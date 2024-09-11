@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityInter
         fakeGPSManager = new FakeGPSManager(this);
         fakeGPSManager.initializeMockProvider();
 
-        //fragmentR(new MapFragment(fakeGPSManager));
+        fragmentR(new MapFragment(fakeGPSManager));
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
