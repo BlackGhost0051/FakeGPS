@@ -13,6 +13,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.blackghost.fakegps.Interfaces.MainActivityInterface;
@@ -35,11 +36,15 @@ import java.util.List;
 public class MapFragment extends Fragment implements MainActivityInterface {
 
     private MapView mapView;
+    private IMapController mapController;
     private MyLocationNewOverlay myLocationOverlay;
 
     private FakeGPSManager fakeGPSManager;
 
     private MainActivityInterface activityInterface;
+
+
+    private ImageButton myLocationBtn;
 
     public MapFragment(FakeGPSManager fakeGPSManager) {
         this.fakeGPSManager = fakeGPSManager;
@@ -75,6 +80,7 @@ public class MapFragment extends Fragment implements MainActivityInterface {
         View view = inflater.inflate(R.layout.fragment_map, container, false);
 
         mapView = view.findViewById(R.id.map);
+        myLocationBtn = view.findViewById(R.id.my_location_btn);
 
         loadMap();
 
@@ -82,6 +88,36 @@ public class MapFragment extends Fragment implements MainActivityInterface {
 
 
         //fakeGPSManager.setLocation(36.1699, -115.1398, 5.0f, 2500); // Las Vegas
+
+
+
+
+
+
+        myLocationBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
+                        && ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
+                    return;
+                }
+
+                LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
+                Location lastKnownLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+
+                if (lastKnownLocation != null) {
+                    GeoPoint currentLocation = new GeoPoint(lastKnownLocation.getLatitude(), lastKnownLocation.getLongitude());
+                    mapView.getController().setCenter(currentLocation);
+                    mapController.setZoom(15.0);
+
+                    Toast.makeText(getContext(), "Centered on current location", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getContext(), "Unable to retrieve current location", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
 
 
 
@@ -95,26 +131,11 @@ public class MapFragment extends Fragment implements MainActivityInterface {
         mapView.setBuiltInZoomControls(true);
         mapView.setMultiTouchControls(true);
 
-        IMapController mapController = mapView.getController();
+        mapController = mapView.getController();
         mapController.setZoom(9.5);
 
         GeoPoint startPoint = new GeoPoint(36.1699, -115.1398); // Las Vegas
         mapController.setCenter(startPoint);
-
-        myLocationOverlay = new MyLocationNewOverlay(new GpsMyLocationProvider(getContext()), mapView);
-        myLocationOverlay.enableMyLocation();
-
-        mapView.getOverlays().add(myLocationOverlay);
-
-        if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
-                && ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-
-            ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
-            Toast.makeText(getActivity(), "N", Toast.LENGTH_SHORT).show();
-
-        } else {
-            Toast.makeText(getActivity(), "Y", Toast.LENGTH_SHORT).show();
-        }
     }
 
 
