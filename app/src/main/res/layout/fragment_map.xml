@@ -13,12 +13,9 @@
 
     <ImageButton
         android:id="@+id/my_location_btn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="20dp"
 
-        android:backgroundTint="@color/white"
+        style="@style/myLocationButton"
+
         android:src="@drawable/location_searching_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
