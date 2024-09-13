@@ -7,7 +7,12 @@
 # Documentation
 
 ## Fragments
+- Map
+- Script
+- Settings
+- Info
 ### Map
+### Script
 ### Settings
 ### Info
 
