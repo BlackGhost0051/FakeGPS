@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <CheckBoxPreference
         app:title="@string/app_name"
         />
+
+
+    <PreferenceCategory app:title="Map">
+        <SwitchPreference
+            android:key="save_map"
+            app:title="Save map"
+            app:summary="Save last position, zoom and rotation."
+            app:defaultValue="false"
+            />
+    </PreferenceCategory>
+
 
     <!--
 
