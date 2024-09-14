@@ -10,8 +10,8 @@
     <PreferenceCategory app:title="Map">
         <SwitchPreference
             android:key="save_map"
-            app:title="Save map"
-            app:summary="Save last position, zoom and rotation."
+            app:title="@string/preferences_save_map_title"
+            app:summary="@string/preferences_save_map_summary"
             app:defaultValue="false"
             />
     </PreferenceCategory>

@@ -16,4 +16,12 @@
     <string name="menu_info">Info</string>
 
     <!-- InfoFragment -->
+
+
+
+
+
+    <!-- Preferences -->
+    <string name="preferences_save_map_title">Save map</string>
+    <string name="preferences_save_map_summary">Save last position, zoom and rotation.</string>
 </resources>
