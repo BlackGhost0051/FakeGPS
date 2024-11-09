@@ -24,6 +24,9 @@ The Map Fragment provides a detailed and interactive map interface that allows u
 The Script Fragment enables automated location simulation through customizable scripts.
 
 ### Settings
+
+The Settings Fragment offers customization options for the Fake GPS application.
+
 ### Info
 
 Fake GPS is an Android application designed to simulate GPS locations on your device. Fake GPS makes it easy to change your device's location.
