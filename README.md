@@ -20,6 +20,9 @@
 The Map Fragment provides a detailed and interactive map interface that allows users to set, view, and manage their simulated GPS locations.
 
 ### Script
+
+The Script Fragment enables automated location simulation through customizable scripts.
+
 ### Settings
 ### Info
 
