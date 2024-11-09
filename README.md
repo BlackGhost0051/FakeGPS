@@ -14,7 +14,11 @@
 # Documentation
 
 ## Fragments
+
 ### Map
+
+The Map Fragment provides a detailed and interactive map interface that allows users to set, view, and manage their simulated GPS locations.
+
 ### Script
 ### Settings
 ### Info
