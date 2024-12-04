@@ -32,6 +32,9 @@ The Settings Fragment offers customization options for the Fake GPS application.
 Fake GPS is an Android application designed to simulate GPS locations on your device. Fake GPS makes it easy to change your device's location.
 
 
-Need
+Need:
 - Map
 - Afk monitoring
+- Script
+- Timer
+- Clock
