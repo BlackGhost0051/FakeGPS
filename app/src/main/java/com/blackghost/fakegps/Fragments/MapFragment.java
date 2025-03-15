@@ -21,6 +21,7 @@ import android.widget.Toast;
 
 import com.blackghost.fakegps.Interfaces.MainActivityInterface;
 import com.blackghost.fakegps.Managers.FakeGPSManager;
+import com.blackghost.fakegps.Managers.MapManager;
 import com.blackghost.fakegps.R;
 
 
@@ -48,6 +49,7 @@ public class MapFragment extends Fragment implements MainActivityInterface {
     private MainActivityInterface activityInterface;
 
     private Marker myLocationMarker;
+    private MapManager mapManager;
 
 
     private ImageButton myLocationBtn;
@@ -88,120 +90,52 @@ public class MapFragment extends Fragment implements MainActivityInterface {
         mapView = view.findViewById(R.id.map);
         myLocationBtn = view.findViewById(R.id.my_location_btn);
 
-        loadMap();
+        mapManager = new MapManager(mapView);
 
-        setWaypointPath();
-
-        myLocationBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED
-                        && ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                    ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
-                    return;
-                }
-
-                LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
-
-                LocationListener locationListener = new LocationListener() {
-
-                    @Override
-                    public void onLocationChanged(@NonNull Location location) {
-
-                        Log.d("onLocationChanged", "Start");
-                        GeoPoint currentLocation = new GeoPoint(location.getLatitude(), location.getLongitude());
-
-                        if (myLocationMarker != null) {
-                            mapView.getOverlays().remove(myLocationMarker);
-                        }
-
-                        myLocationMarker = new Marker(mapView);
-                        myLocationMarker.setPosition(currentLocation);
-                        myLocationMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
-
-                        mapView.getOverlays().add(myLocationMarker);
-                        mapView.invalidate();
-
-                        mapController.setCenter(currentLocation);
-                        mapController.setZoom(20.0f);
-                    }
-
-                    @Override
-                    public void onStatusChanged(String provider, int status, Bundle extras) { }
-
-                    @Override
-                    public void onProviderEnabled(String provider) { }
-
-                    @Override
-                    public void onProviderDisabled(String provider) { }
-                };
-
-                locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 4000, 10, locationListener);
-
-                Location lastKnownLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-                if (lastKnownLocation != null) {
-                    GeoPoint currentLocation = new GeoPoint(lastKnownLocation.getLatitude(), lastKnownLocation.getLongitude());
-                    mapView.getController().setCenter(currentLocation);
-                    mapController.setZoom(15.0);
-
-                    myLocationMarker = new Marker(mapView);
-                    myLocationMarker.setPosition(currentLocation);
-                    myLocationMarker.setAnchor(Marker.ANCHOR_CENTER, Marker.ANCHOR_BOTTOM);
-
-                    mapView.getOverlays().add(myLocationMarker);
-                    mapView.invalidate();
-                } else {
-                    Toast.makeText(getContext(), "Unable to retrieve current location", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-
-
-
+        myLocationBtn.setOnClickListener(v -> getCurrentLocation());
 
         return view;
     }
 
-    private void loadMap(){
 
-        mapView.setTileSource(TileSourceFactory.MAPNIK);
+    private void getCurrentLocation(){
+        if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
+            return;
+        }
 
-        mapView.setBuiltInZoomControls(true);
-        mapView.setMultiTouchControls(true);
+        LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
 
-        mapController = mapView.getController();
-        mapController.setZoom(9.5);
+        Location lastKnownLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+        if (lastKnownLocation != null) {
+            GeoPoint currentLocation = new GeoPoint(lastKnownLocation.getLatitude(), lastKnownLocation.getLongitude());
+            mapManager.userClickToLocationButton(currentLocation);
+        } else {
+            Toast.makeText(getContext(), "Unable to retrieve current location", Toast.LENGTH_SHORT).show();
+        }
 
-        GeoPoint startPoint = new GeoPoint(36.1699, -115.1398); // Las Vegas
-        mapController.setCenter(startPoint);
+        LocationListener locationListener = new LocationListener() {
+            @Override
+            public void onLocationChanged(@NonNull Location location) {
+                Log.d("onLocationChanged", "Updating location...");
+                GeoPoint currentLocation = new GeoPoint(location.getLatitude(), location.getLongitude());
+                mapManager.updateUserLocation(currentLocation);
+            }
+
+            @Override
+            public void onStatusChanged(String provider, int status, Bundle extras) {}
+
+            @Override
+            public void onProviderEnabled(String provider) {}
+
+            @Override
+            public void onProviderDisabled(String provider) {}
+        };
+
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 4000, 10, locationListener);
     }
 
 
-
-    private void setWaypointPath() {
-        List<Location> waypoints = new ArrayList<>();
-
-        Location point1 = new Location(LocationManager.GPS_PROVIDER);
-        point1.setLatitude(37.7749);
-        point1.setLongitude(-122.4194);
-        point1.setAccuracy(5.0f);
-        waypoints.add(point1);
-
-        Location point2 = new Location(LocationManager.GPS_PROVIDER);
-        point2.setLatitude(36.8749);
-        point2.setLongitude(-122.4194);
-        point2.setAccuracy(5.0f);
-        waypoints.add(point2);
-
-        Location point3 = new Location(LocationManager.GPS_PROVIDER);
-        point3.setLatitude(35.9749);
-        point3.setLongitude(-122.4194);
-        point3.setAccuracy(5.0f);
-        waypoints.add(point3);
-
-        long intervalMillis = 5000;
-        fakeGPSManager.setWay(waypoints, intervalMillis);
-    }
 
     @Override
     public void test() {
