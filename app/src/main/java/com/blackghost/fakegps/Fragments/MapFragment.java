@@ -90,51 +90,12 @@ public class MapFragment extends Fragment implements MainActivityInterface {
         mapView = view.findViewById(R.id.map);
         myLocationBtn = view.findViewById(R.id.my_location_btn);
 
-        mapManager = new MapManager(mapView);
+        mapManager = new MapManager(mapView, getContext(), myLocationBtn);
 
-        myLocationBtn.setOnClickListener(v -> getCurrentLocation());
+        myLocationBtn.setOnClickListener(v -> mapManager.getCurrentLocation());
 
         return view;
     }
-
-
-    private void getCurrentLocation(){
-        if (ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 1);
-            return;
-        }
-
-        LocationManager locationManager = (LocationManager) getActivity().getSystemService(Context.LOCATION_SERVICE);
-
-        Location lastKnownLocation = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-        if (lastKnownLocation != null) {
-            GeoPoint currentLocation = new GeoPoint(lastKnownLocation.getLatitude(), lastKnownLocation.getLongitude());
-            mapManager.userClickToLocationButton(currentLocation);
-        } else {
-            Toast.makeText(getContext(), "Unable to retrieve current location", Toast.LENGTH_SHORT).show();
-        }
-
-        LocationListener locationListener = new LocationListener() {
-            @Override
-            public void onLocationChanged(@NonNull Location location) {
-                Log.d("onLocationChanged", "Updating location...");
-                GeoPoint currentLocation = new GeoPoint(location.getLatitude(), location.getLongitude());
-                mapManager.updateUserLocation(currentLocation);
-            }
-
-            @Override
-            public void onStatusChanged(String provider, int status, Bundle extras) {}
-
-            @Override
-            public void onProviderEnabled(String provider) {}
-
-            @Override
-            public void onProviderDisabled(String provider) {}
-        };
-
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 4000, 10, locationListener);
-    }
-
 
 
     @Override
