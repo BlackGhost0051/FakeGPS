@@ -16,7 +16,7 @@
 
         style="@style/myLocationButton"
 
-        android:src="@drawable/baseline_location_disabled_24"
+        android:src="@drawable/location_disabled_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
