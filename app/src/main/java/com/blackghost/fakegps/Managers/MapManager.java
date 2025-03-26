@@ -25,10 +25,10 @@ import android.widget.Toast;
 import com.blackghost.fakegps.R;
 
 public class MapManager {
-    private MapView mapView;
-    private Context context;
-    private ImageButton myLocationBtn;
-    private LocationManager locationManager;
+    private final MapView mapView;
+    private final Context context;
+    private final ImageButton myLocationBtn;
+    private final LocationManager locationManager;
 
     private MapController mapController;
     private Marker myLocationMarker;
