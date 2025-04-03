@@ -16,6 +16,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -53,6 +54,7 @@ public class MapFragment extends Fragment implements MainActivityInterface {
 
 
     private ImageButton myLocationBtn;
+    private EditText searchBar;
 
     public MapFragment(FakeGPSManager fakeGPSManager) {
         this.fakeGPSManager = fakeGPSManager;
@@ -89,8 +91,9 @@ public class MapFragment extends Fragment implements MainActivityInterface {
 
         mapView = view.findViewById(R.id.map);
         myLocationBtn = view.findViewById(R.id.my_location_btn);
+        searchBar = view.findViewById(R.id.search_bar);
 
-        mapManager = new MapManager(mapView, getContext(), myLocationBtn);
+        mapManager = new MapManager(mapView, getContext(), myLocationBtn, searchBar);
 
         myLocationBtn.setOnClickListener(v -> mapManager.getCurrentLocation());
 

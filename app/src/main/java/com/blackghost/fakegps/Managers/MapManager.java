@@ -10,6 +10,7 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.EditText;
 import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
@@ -28,17 +29,18 @@ public class MapManager {
     private final MapView mapView;
     private final Context context;
     private final ImageButton myLocationBtn;
+    private final EditText searchBar;
     private final LocationManager locationManager;
 
     private MapController mapController;
     private Marker myLocationMarker;
 
 
-
-    public MapManager(MapView mapView, Context context, ImageButton myLocationBtn){
+    public MapManager(MapView mapView, Context context, ImageButton myLocationBtn, EditText searchBar){
         this.mapView = mapView;
         this.context = context;
         this.myLocationBtn = myLocationBtn;
+        this.searchBar = searchBar;
         this.locationManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
 
         loadMap();
