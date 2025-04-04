@@ -5,11 +5,14 @@ import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
@@ -24,6 +27,8 @@ import org.osmdroid.views.overlay.Marker;
 import android.widget.Toast;
 
 import com.blackghost.fakegps.R;
+
+import java.util.List;
 
 public class MapManager {
     private final MapView mapView;
@@ -44,6 +49,14 @@ public class MapManager {
         this.locationManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
 
         loadMap();
+
+        searchBar.setOnEditorActionListener((v, actionId, event) -> {
+            String locationName = searchBar.getText().toString();
+            if (!locationName.isEmpty()) {
+                searchLocation(locationName);
+            }
+            return true;
+        });
     }
 
     private void loadMap(){
@@ -57,6 +70,23 @@ public class MapManager {
 
         GeoPoint startPoint = new GeoPoint(36.1699, -115.1398); // Las Vegas
         mapController.setCenter(startPoint);
+    }
+
+    private void searchLocation(String locationName){
+        Geocoder geocoder = new android.location.Geocoder(context);
+        try{
+            List<Address> addresses = geocoder.getFromLocationName(locationName, 1);
+            if (addresses != null && !addresses.isEmpty()) {
+                android.location.Address address = addresses.get(0);
+                GeoPoint geoPoint = new GeoPoint(address.getLatitude(), address.getLongitude());
+                userClickToLocationButton(geoPoint);
+            } else {
+                Toast.makeText(context, "Location not found", Toast.LENGTH_SHORT).show();
+            }
+        } catch (Exception e){
+            e.printStackTrace();
+            Toast.makeText(context, "Error finding location", Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void userClickToLocationButton(GeoPoint location){
