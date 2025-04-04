@@ -79,7 +79,7 @@ public class MapManager {
             if (addresses != null && !addresses.isEmpty()) {
                 android.location.Address address = addresses.get(0);
                 GeoPoint geoPoint = new GeoPoint(address.getLatitude(), address.getLongitude());
-                userClickToLocationButton(geoPoint);
+                centerMap(geoPoint);
             } else {
                 Toast.makeText(context, "Location not found", Toast.LENGTH_SHORT).show();
             }
@@ -87,6 +87,10 @@ public class MapManager {
             e.printStackTrace();
             Toast.makeText(context, "Error finding location", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private void centerMap(GeoPoint point){
+        mapController.setCenter(point);
     }
 
     public void userClickToLocationButton(GeoPoint location){
