@@ -38,3 +38,6 @@ Need:
 - Script
 - Timer
 - Clock
+
+[//]: # ( TODD: map clastering)
+[//]: # ( TODD: map search)
