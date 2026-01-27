@@ -5,11 +5,19 @@
 **Fake GPS** is an Android application designed to simulate GPS locations on your device, allowing users to set custom locations and navigate between waypoints seamlessly. This application is useful for testing location-based apps, spoofing location, and other location-dependent functionalities.
 
 # Content
+- [Requirements](#requirements)
 - [Fragments](#fragments)
   - [Map](#map)
   - [Script](#script)
   - [Settings](#settings)
   - [Info](#info)
+- [TODO](#todo)
+
+# Requirements
+
+- Android 7.0+ (API 24)
+- Developer mode enabled on device
+- Mock location permission granted
 
 # Documentation
 
