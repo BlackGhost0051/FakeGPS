@@ -7,10 +7,10 @@
 # Content
 - [Requirements](#requirements)
 - [Fragments](#fragments)
-  - [Map](#map)
-  - [Script](#script)
-  - [Settings](#settings)
-  - [Info](#info)
+    - [Map](#map)
+    - [Script](#script)
+    - [Settings](#settings)
+    - [Info](#info)
 - [TODO](#todo)
 
 # Requirements
@@ -25,19 +25,20 @@
 
 ### Map
 
-The Map Fragment provides a detailed and interactive map interface that allows users to set, view, and manage their simulated GPS locations.
+The Map Fragment provides a detailed and interactive map interface that allows users to set, view, and manage their simulated GPS locations. Powered by OpenStreetMap.
 
 ### Script
 
-The Script Fragment enables automated location simulation through customizable scripts.
+The Script Fragment enables automated location simulation through customizable scripts, allowing waypoint-based route execution.
 
 ### Settings
 
-The Settings Fragment offers customization options for the Fake GPS application.
+The Settings Fragment offers customization options for the Fake GPS application, including map state persistence.
 
 ### Info
 
-Fake GPS is an Android application designed to simulate GPS locations on your device. Fake GPS makes it easy to change your device's location.
+Displays application information and developer details.
+
 
 
 Need:
