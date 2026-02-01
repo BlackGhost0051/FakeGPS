@@ -28,6 +28,22 @@
     <string name="info_section_links">Links</string>
 
 
+    <!-- ScriptFragment -->
+    <string name="script_start_button">Start</string>
+    <string name="script_default_location">!23.456, 123.456</string>
+
+    <!-- MapFragment -->
+    <string name="map_my_location_btn_description">My location</string>
+    <string name="map_search_hint">Search location…</string>
+
+    <!-- Toasts -->
+    <string name="toast_test">TEST----IN</string>
+    <string name="toast_set_location">SetLocation</string>
+    <string name="toast_location_not_found">Location not found</string>
+    <string name="toast_error_finding_location">Error finding location</string>
+    <string name="toast_location_permission_required">Location permission required!</string>
+    <string name="toast_unable_to_retrieve_location">Unable to retrieve current location</string>
+
     <!-- Preferences -->
     <string name="preferences_save_map_title">Save map</string>
     <string name="preferences_save_map_summary">Save last position, zoom and rotation.</string>
