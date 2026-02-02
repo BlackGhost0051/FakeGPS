@@ -16,7 +16,7 @@
 
         style="@style/myLocationButton"
 
-        android:contentDescription="TODO"
+        android:contentDescription="@string/map_my_location_btn_description"
         android:src="@drawable/location_disabled_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -35,7 +35,7 @@
         android:drawablePadding="8dp"
         android:paddingStart="12dp"
         android:paddingEnd="12dp"
-        android:hint="Search location…"
+        android:hint="@string/map_search_hint"
         android:inputType="text"
         android:imeOptions="actionSearch"
         android:maxLines="1"
