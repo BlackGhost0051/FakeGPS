@@ -20,7 +20,7 @@
 
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Start"
+            android:text="@string/script_start_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.1"
             app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
 
             android:textColor="@color/white"
-            android:text="!23.456, 123.456"
+            android:text="@string/script_default_location"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
