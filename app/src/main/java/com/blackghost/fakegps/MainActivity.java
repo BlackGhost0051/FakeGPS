@@ -98,12 +98,12 @@ public class MainActivity extends AppCompatActivity implements MainActivityInter
 
     @Override
     public void test() {
-        Toast.makeText(this, "TEST----IN", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, R.string.toast_test, Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void setLocation() {
         fakeGPSManager.setLocation(36.1699, -115.1398, 5.0f, 2500);
-        Toast.makeText(this, "SetLocation", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, R.string.toast_set_location, Toast.LENGTH_SHORT).show();
     }
 }
