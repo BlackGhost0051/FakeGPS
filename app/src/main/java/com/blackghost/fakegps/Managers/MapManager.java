@@ -11,8 +11,11 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.ImageButton;
 
@@ -51,11 +54,14 @@ public class MapManager {
         loadMap();
 
         searchBar.setOnEditorActionListener((v, actionId, event) -> {
-            String locationName = searchBar.getText().toString();
-            if (!locationName.isEmpty()) {
-                searchLocation(locationName);
+            if (actionId == EditorInfo.IME_ACTION_SEARCH || actionId == EditorInfo.IME_ACTION_DONE) {
+                String locationName = searchBar.getText().toString().trim();
+                if (!locationName.isEmpty()) {
+                    searchLocation(locationName);
+                }
+                return true;
             }
-            return true;
+            return false;
         });
     }
 
@@ -72,21 +78,26 @@ public class MapManager {
         mapController.setCenter(startPoint);
     }
 
-    private void searchLocation(String locationName){
-        Geocoder geocoder = new android.location.Geocoder(context);
-        try{
-            List<Address> addresses = geocoder.getFromLocationName(locationName, 1);
-            if (addresses != null && !addresses.isEmpty()) {
-                android.location.Address address = addresses.get(0);
-                GeoPoint geoPoint = new GeoPoint(address.getLatitude(), address.getLongitude());
-                centerMap(geoPoint);
-            } else {
-                Toast.makeText(context, "Location not found", Toast.LENGTH_SHORT).show();
+    private void searchLocation(String locationName) {
+        Handler mainHandler = new Handler(Looper.getMainLooper());
+        new Thread(() -> {
+            Geocoder geocoder = new Geocoder(context);
+            try {
+                List<Address> addresses = geocoder.getFromLocationName(locationName, 1);
+                if (addresses != null && !addresses.isEmpty()) {
+                    Address address = addresses.get(0);
+                    GeoPoint geoPoint = new GeoPoint(address.getLatitude(), address.getLongitude());
+                    mainHandler.post(() -> centerMap(geoPoint));
+                } else {
+                    mainHandler.post(() ->
+                            Toast.makeText(context, R.string.toast_location_not_found, Toast.LENGTH_SHORT).show());
+                }
+            } catch (Exception e) {
+                Log.e("MapManager", "Geocoder error", e);
+                mainHandler.post(() ->
+                        Toast.makeText(context, R.string.toast_error_finding_location, Toast.LENGTH_SHORT).show());
             }
-        } catch (Exception e){
-            e.printStackTrace();
-            Toast.makeText(context, "Error finding location", Toast.LENGTH_SHORT).show();
-        }
+        }).start();
     }
 
     private void centerMap(GeoPoint point){
@@ -122,7 +133,7 @@ public class MapManager {
 
     public void getCurrentLocation(){
         if (ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            Toast.makeText(context, "Location permission required!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, R.string.toast_location_permission_required, Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -134,7 +145,7 @@ public class MapManager {
             userClickToLocationButton(currentLocation);
             myLocationBtn.setImageResource(R.drawable.my_location_24);
         } else {
-            Toast.makeText(context, "Unable to retrieve current location", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, R.string.toast_unable_to_retrieve_location, Toast.LENGTH_SHORT).show();
             myLocationBtn.setImageResource(R.drawable.location_disabled_24);
         }
 
