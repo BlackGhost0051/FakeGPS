@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="open">öffnen</string>
+    <string name="close">schließen</string>
+
+    <string name="menu_map">Karte</string>
+    <string name="menu_script">Skript</string>
+    <string name="menu_settings">Einstellungen</string>
+    <string name="menu_info">Info</string>
+
+    <string name="info_description">Eine einfache Android-App zum Fälschen Ihres GPS-Standorts. Legen Sie einen beliebigen Ort auf der Karte fest oder führen Sie automatisierte Bewegungsskripte aus.</string>
+    <string name="info_version_label">Version</string>
+    <string name="info_developer_label">Entwickler</string>
+    <string name="info_github_label">GitHub</string>
+    <string name="info_repo_label">Repository</string>
+    <string name="info_opensource_label">Open Source</string>
+    <string name="info_opensource_value">Ja</string>
+    <string name="info_section_about">Über</string>
+    <string name="info_section_links">Links</string>
+
+    <string name="script_start_button">Starten</string>
+
+    <string name="map_my_location_btn_description">Mein Standort</string>
+    <string name="map_search_hint">Ort suchen…</string>
+
+    <string name="toast_location_not_found">Ort nicht gefunden</string>
+    <string name="toast_error_finding_location">Fehler bei der Ortsuche</string>
+    <string name="toast_location_permission_required">Standortberechtigung erforderlich!</string>
+    <string name="toast_unable_to_retrieve_location">Aktueller Standort konnte nicht abgerufen werden</string>
+
+    <string name="preferences_dark_theme_title">Dunkles Design</string>
+    <string name="preferences_dark_theme_summary">Zwischen hellem und dunklem Modus wechseln.</string>
+    <string name="preferences_save_map_title">Karte speichern</string>
+    <string name="preferences_save_map_summary">Letzte Position, Zoom und Drehung speichern.</string>
+</resources>
