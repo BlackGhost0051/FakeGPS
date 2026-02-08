@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="open">otwórz</string>
+    <string name="close">zamknij</string>
+
+    <string name="menu_map">Mapa</string>
+    <string name="menu_script">Skrypt</string>
+    <string name="menu_settings">Ustawienia</string>
+    <string name="menu_info">Informacje</string>
+
+    <string name="info_description">Prosta aplikacja Android do fałszowania lokalizacji GPS. Ustaw dowolne miejsce na mapie lub uruchom automatyczny skrypt ruchu.</string>
+    <string name="info_version_label">Wersja</string>
+    <string name="info_developer_label">Deweloper</string>
+    <string name="info_github_label">GitHub</string>
+    <string name="info_repo_label">Repozytorium</string>
+    <string name="info_opensource_label">Otwarty kod źródłowy</string>
+    <string name="info_opensource_value">Tak</string>
+    <string name="info_section_about">O aplikacji</string>
+    <string name="info_section_links">Linki</string>
+
+    <string name="script_start_button">Start</string>
+
+    <string name="map_my_location_btn_description">Moja lokalizacja</string>
+    <string name="map_search_hint">Szukaj miejsca…</string>
+
+    <string name="toast_location_not_found">Nie znaleziono miejsca</string>
+    <string name="toast_error_finding_location">Błąd wyszukiwania miejsca</string>
+    <string name="toast_location_permission_required">Wymagane uprawnienie lokalizacji!</string>
+    <string name="toast_unable_to_retrieve_location">Nie można pobrać bieżącej lokalizacji</string>
+
+    <string name="preferences_dark_theme_title">Ciemny motyw</string>
+    <string name="preferences_dark_theme_summary">Przełącz między trybem jasnym i ciemnym.</string>
+    <string name="preferences_save_map_title">Zapisz mapę</string>
+    <string name="preferences_save_map_summary">Zapisz ostatnią pozycję, zoom i obrót.</string>
+</resources>
