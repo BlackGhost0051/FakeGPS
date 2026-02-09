@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="open">відкрити</string>
+    <string name="close">закрити</string>
+
+    <string name="menu_map">Карта</string>
+    <string name="menu_script">Скрипт</string>
+    <string name="menu_settings">Налаштування</string>
+    <string name="menu_info">Інформація</string>
+
+    <string name="info_description">Простий Android-додаток для підміни GPS-координат. Встановіть будь-яке місце на карті або запустіть автоматичний скрипт руху.</string>
+    <string name="info_version_label">Версія</string>
+    <string name="info_developer_label">Розробник</string>
+    <string name="info_github_label">GitHub</string>
+    <string name="info_repo_label">Репозиторій</string>
+    <string name="info_opensource_label">Відкритий вихідний код</string>
+    <string name="info_opensource_value">Так</string>
+    <string name="info_section_about">Про додаток</string>
+    <string name="info_section_links">Посилання</string>
+
+    <string name="script_start_button">Старт</string>
+
+    <string name="map_my_location_btn_description">Моє місцезнаходження</string>
+    <string name="map_search_hint">Пошук місця…</string>
+
+    <string name="toast_location_not_found">Місце не знайдено</string>
+    <string name="toast_error_finding_location">Помилка пошуку місця</string>
+    <string name="toast_location_permission_required">Потрібен дозвіл на місцезнаходження!</string>
+    <string name="toast_unable_to_retrieve_location">Не вдалося отримати поточне місцезнаходження</string>
+
+    <string name="preferences_dark_theme_title">Темна тема</string>
+    <string name="preferences_dark_theme_summary">Перемикання між світлим і темним режимом.</string>
+    <string name="preferences_save_map_title">Зберегти карту</string>
+    <string name="preferences_save_map_summary">Зберегти останню позицію, масштаб та поворот.</string>
+</resources>
