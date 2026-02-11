@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="open">打开</string>
+    <string name="close">关闭</string>
+
+    <string name="menu_map">地图</string>
+    <string name="menu_script">脚本</string>
+    <string name="menu_settings">设置</string>
+    <string name="menu_info">信息</string>
+
+    <string name="info_description">一款简单的 Android 应用，用于伪造 GPS 位置。在地图上设置任意位置，或运行自动移动脚本。</string>
+    <string name="info_version_label">版本</string>
+    <string name="info_developer_label">开发者</string>
+    <string name="info_github_label">GitHub</string>
+    <string name="info_repo_label">代码仓库</string>
+    <string name="info_opensource_label">开源</string>
+    <string name="info_opensource_value">是</string>
+    <string name="info_section_about">关于</string>
+    <string name="info_section_links">链接</string>
+
+    <string name="script_start_button">开始</string>
+
+    <string name="map_my_location_btn_description">我的位置</string>
+    <string name="map_search_hint">搜索地点…</string>
+
+    <string name="toast_location_not_found">未找到该位置</string>
+    <string name="toast_error_finding_location">搜索位置时出错</string>
+    <string name="toast_location_permission_required">需要位置权限！</string>
+    <string name="toast_unable_to_retrieve_location">无法获取当前位置</string>
+
+    <string name="preferences_dark_theme_title">深色主题</string>
+    <string name="preferences_dark_theme_summary">在浅色和深色模式之间切换。</string>
+    <string name="preferences_save_map_title">保存地图</string>
+    <string name="preferences_save_map_summary">保存最后的位置、缩放和旋转。</string>
+</resources>
