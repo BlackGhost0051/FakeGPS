@@ -7,6 +7,14 @@
         />
 
 
+    <PreferenceCategory app:title="@string/menu_settings">
+        <SwitchPreference
+            android:key="dark_theme"
+            app:title="@string/preferences_dark_theme_title"
+            app:summary="@string/preferences_dark_theme_summary"
+            app:defaultValue="false" />
+    </PreferenceCategory>
+
     <PreferenceCategory app:title="Map">
         <SwitchPreference
             android:key="save_map"
