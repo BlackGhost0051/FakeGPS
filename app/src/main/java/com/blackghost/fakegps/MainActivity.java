@@ -1,8 +1,12 @@
 package com.blackghost.fakegps;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.MenuItem;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatDelegate;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -37,6 +41,13 @@ public class MainActivity extends AppCompatActivity implements MainActivityInter
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        boolean darkTheme = prefs.getBoolean("dark_theme", false);
+        AppCompatDelegate.setDefaultNightMode(
+                darkTheme ? AppCompatDelegate.MODE_NIGHT_YES
+                          : AppCompatDelegate.MODE_NIGHT_NO
+        );
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -53,8 +64,9 @@ public class MainActivity extends AppCompatActivity implements MainActivityInter
         fakeGPSManager = new FakeGPSManager(this);
         fakeGPSManager.initializeMockProvider();
 
-//        fragmentR(new SettingsFragment());
-        fragmentR(new MapFragment(fakeGPSManager));
+        if (savedInstanceState == null) {
+            fragmentR(new MapFragment(fakeGPSManager));
+        }
 
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -87,6 +99,10 @@ public class MainActivity extends AppCompatActivity implements MainActivityInter
             }
         });
 
+    }
+
+    public FakeGPSManager getFakeGPSManager() {
+        return fakeGPSManager;
     }
 
     private void fragmentR(Fragment fragment) {
