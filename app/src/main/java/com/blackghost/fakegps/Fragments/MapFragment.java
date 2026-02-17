@@ -60,10 +60,16 @@ public class MapFragment extends Fragment implements MainActivityInterface {
         this.fakeGPSManager = fakeGPSManager;
     }
 
+    public MapFragment() {}
+
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
         activityInterface = (MainActivityInterface) context;
+
+        if (fakeGPSManager == null && context instanceof com.blackghost.fakegps.MainActivity) {
+            fakeGPSManager = ((com.blackghost.fakegps.MainActivity) context).getFakeGPSManager();
+        }
     }
 
     @Override
