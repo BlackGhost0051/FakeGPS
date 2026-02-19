@@ -41,12 +41,8 @@ Displays application information and developer details.
 
 
 
-Need:
-- Map
-- Afk monitoring
-- Script
-- Timer
-- Clock
 
 [//]: # ( TODD: map clastering)
 [//]: # ( TODD: map search)
+[//]: # ( TODD: script logic in json format)
+[//]: # ( TODD: app must work in 24/7 add parametr in setting ( need to make auto scripts )
