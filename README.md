@@ -42,7 +42,6 @@ Displays application information and developer details.
 
 
 
-[//]: # ( TODD: map clastering)
 [//]: # ( TODD: map search)
 [//]: # ( TODD: script logic in json format)
 [//]: # ( TODD: app must work in 24/7 add parametr in setting ( need to make auto scripts )
