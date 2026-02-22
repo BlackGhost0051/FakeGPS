@@ -6,10 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".Fragments.MapFragment">
 
-    <org.osmdroid.views.MapView
-        android:id="@+id/map"
+    <org.maplibre.android.maps.MapView
+        android:id="@+id/mapView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        app:maplibre_uiAttribution="false"
+        app:maplibre_uiLogo="false"
+        />
 
     <ImageButton
         android:id="@+id/my_location_btn"

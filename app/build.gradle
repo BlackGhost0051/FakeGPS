@@ -30,6 +30,8 @@ android {
 }
 
 dependencies {
+    implementation libs.android.sdk
+
     implementation libs.osmdroid.android
     implementation libs.appcompat
     implementation libs.material
