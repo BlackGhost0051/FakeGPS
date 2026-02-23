@@ -28,6 +28,9 @@
     <string name="toast_location_permission_required">Wymagane uprawnienie lokalizacji!</string>
     <string name="toast_unable_to_retrieve_location">Nie można pobrać bieżącej lokalizacji</string>
 
+    <string name="preferences_language_title">Język</string>
+    <string name="preferences_language_summary">Wybierz preferowany język</string>
+    <string name="language_system_default">Domyślny systemu</string>
     <string name="preferences_dark_theme_title">Ciemny motyw</string>
     <string name="preferences_dark_theme_summary">Przełącz między trybem jasnym i ciemnym.</string>
     <string name="preferences_save_map_title">Zapisz mapę</string>

@@ -28,6 +28,9 @@
     <string name="toast_location_permission_required">需要位置权限！</string>
     <string name="toast_unable_to_retrieve_location">无法获取当前位置</string>
 
+    <string name="preferences_language_title">语言</string>
+    <string name="preferences_language_summary">选择您的首选语言</string>
+    <string name="language_system_default">系统默认</string>
     <string name="preferences_dark_theme_title">深色主题</string>
     <string name="preferences_dark_theme_summary">在浅色和深色模式之间切换。</string>
     <string name="preferences_save_map_title">保存地图</string>

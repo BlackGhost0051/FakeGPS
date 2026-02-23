@@ -28,6 +28,9 @@
     <string name="toast_location_permission_required">¡Se requiere permiso de ubicación!</string>
     <string name="toast_unable_to_retrieve_location">No se pudo obtener la ubicación actual</string>
 
+    <string name="preferences_language_title">Idioma</string>
+    <string name="preferences_language_summary">Elige tu idioma preferido</string>
+    <string name="language_system_default">Predeterminado del sistema</string>
     <string name="preferences_dark_theme_title">Tema oscuro</string>
     <string name="preferences_dark_theme_summary">Cambiar entre modo claro y oscuro.</string>
     <string name="preferences_save_map_title">Guardar mapa</string>

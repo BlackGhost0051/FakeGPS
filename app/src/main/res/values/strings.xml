@@ -38,6 +38,9 @@
     <string name="toast_location_permission_required">Location permission required!</string>
     <string name="toast_unable_to_retrieve_location">Unable to retrieve current location</string>
 
+    <string name="preferences_language_title">Language</string>
+    <string name="preferences_language_summary">Choose your preferred language</string>
+    <string name="language_system_default">System default</string>
     <string name="preferences_dark_theme_title">Dark theme</string>
     <string name="preferences_dark_theme_summary">Switch between light and dark mode.</string>
     <string name="preferences_save_map_title">Save map</string>

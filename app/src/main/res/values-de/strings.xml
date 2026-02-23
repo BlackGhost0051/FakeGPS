@@ -28,6 +28,9 @@
     <string name="toast_location_permission_required">Standortberechtigung erforderlich!</string>
     <string name="toast_unable_to_retrieve_location">Aktueller Standort konnte nicht abgerufen werden</string>
 
+    <string name="preferences_language_title">Sprache</string>
+    <string name="preferences_language_summary">Wählen Sie Ihre bevorzugte Sprache</string>
+    <string name="language_system_default">Systemstandard</string>
     <string name="preferences_dark_theme_title">Dunkles Design</string>
     <string name="preferences_dark_theme_summary">Zwischen hellem und dunklem Modus wechseln.</string>
     <string name="preferences_save_map_title">Karte speichern</string>

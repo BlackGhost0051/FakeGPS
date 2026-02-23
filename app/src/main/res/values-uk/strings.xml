@@ -28,6 +28,9 @@
     <string name="toast_location_permission_required">Потрібен дозвіл на місцезнаходження!</string>
     <string name="toast_unable_to_retrieve_location">Не вдалося отримати поточне місцезнаходження</string>
 
+    <string name="preferences_language_title">Мова</string>
+    <string name="preferences_language_summary">Виберіть бажану мову</string>
+    <string name="language_system_default">Системна за замовчуванням</string>
     <string name="preferences_dark_theme_title">Темна тема</string>
     <string name="preferences_dark_theme_summary">Перемикання між світлим і темним режимом.</string>
     <string name="preferences_save_map_title">Зберегти карту</string>

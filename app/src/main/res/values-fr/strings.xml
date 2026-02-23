@@ -28,6 +28,9 @@
     <string name="toast_location_permission_required">Permission de localisation requise\u00A0!</string>
     <string name="toast_unable_to_retrieve_location">Impossible d\'obtenir la position actuelle</string>
 
+    <string name="preferences_language_title">Langue</string>
+    <string name="preferences_language_summary">Choisissez votre langue préférée</string>
+    <string name="language_system_default">Par défaut du système</string>
     <string name="preferences_dark_theme_title">Thème sombre</string>
     <string name="preferences_dark_theme_summary">Basculer entre le mode clair et sombre.</string>
     <string name="preferences_save_map_title">Enregistrer la carte</string>
