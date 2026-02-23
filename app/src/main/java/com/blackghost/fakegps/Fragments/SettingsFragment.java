@@ -1,9 +1,13 @@
 package com.blackghost.fakegps.Fragments;
 
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.core.os.LocaleListCompat;
+import androidx.preference.ListPreference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.SwitchPreference;
 
@@ -21,6 +25,15 @@ public class SettingsFragment extends PreferenceFragmentCompat {
         super.onCreate(savedInstanceState);
         getContext().getTheme().applyStyle(R.style.preferences_style, true);
 
+        ListPreference languagePref = findPreference("language");
+        if (languagePref != null) {
+            languagePref.setOnPreferenceChangeListener((preference, newValue) -> {
+                String languageCode = (String) newValue;
+                setAppLocale(languageCode);
+                return true;
+            });
+        }
+
         SwitchPreference darkThemePref = findPreference("dark_theme");
         if (darkThemePref != null) {
             darkThemePref.setOnPreferenceChangeListener((preference, newValue) -> {
@@ -32,5 +45,17 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                 return true;
             });
         }
+    }
+
+    private void setAppLocale(String languageCode) {
+        LocaleListCompat appLocale;
+
+        if ("system".equals(languageCode)) {
+            appLocale = LocaleListCompat.getEmptyLocaleList();
+        } else {
+            appLocale = LocaleListCompat.forLanguageTags(languageCode);
+        }
+
+        AppCompatDelegate.setApplicationLocales(appLocale);
     }
 }
