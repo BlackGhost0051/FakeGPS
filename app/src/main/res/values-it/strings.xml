@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Fake GPS</string>
+    <string name="app_version">0.1</string>
+
+    <string name="gitHubUrl">https://github.com/BlackGhost0051</string>
+    <string name="gitHubRepoUrl">https://github.com/BlackGhost0051/FakeGPS</string>
+
+    <string name="open">apri</string>
+    <string name="close">chiudi</string>
+
+    <string name="menu_map">Mappa</string>
+    <string name="menu_script">Script</string>
+    <string name="menu_settings">Impostazioni</string>
+    <string name="menu_info">Info</string>
+
+    <string name="info_description">Una semplice app Android per falsificare la tua posizione GPS. Imposta qualsiasi posizione sulla mappa o esegui script di movimento automatizzati.</string>
+    <string name="info_version_label">Versione</string>
+    <string name="info_developer_label">Sviluppatore</string>
+    <string name="info_developer_name">BlackGhost</string>
+    <string name="info_github_label">GitHub</string>
+    <string name="info_repo_label">Repository</string>
+    <string name="info_opensource_label">Open Source</string>
+    <string name="info_opensource_value">Sì</string>
+    <string name="info_section_about">Informazioni</string>
+    <string name="info_section_links">Link</string>
+
+
+    <string name="script_start_button">Avvia</string>
+    <string name="script_default_location">!23.456, 123.456</string>
+
+    <string name="map_my_location_btn_description">La mia posizione</string>
+    <string name="map_search_hint">Cerca posizione…</string>
+
+    <string name="toast_test">TEST----IN</string>
+    <string name="toast_set_location">ImpostaPosizione</string>
+    <string name="toast_location_not_found">Posizione non trovata</string>
+    <string name="toast_error_finding_location">Errore nella ricerca della posizione</string>
+    <string name="toast_location_permission_required">Permesso di localizzazione richiesto!</string>
+    <string name="toast_unable_to_retrieve_location">Impossibile recuperare la posizione corrente</string>
+
+    <string name="preferences_language_title">Lingua</string>
+    <string name="preferences_language_summary">Scegli la tua lingua preferita</string>
+    <string name="language_system_default">Predefinita del sistema</string>
+    <string name="preferences_dark_theme_title">Tema scuro</string>
+    <string name="preferences_dark_theme_summary">Passa dalla modalità chiara a quella scura.</string>
+    <string name="preferences_save_map_title">Salva mappa</string>
+    <string name="preferences_save_map_summary">Salva ultima posizione, zoom e rotazione.</string>
+</resources>
