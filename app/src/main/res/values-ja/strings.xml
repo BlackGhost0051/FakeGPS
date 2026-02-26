@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Fake GPS</string>
+    <string name="app_version">0.1</string>
+
+    <string name="gitHubUrl">https://github.com/BlackGhost0051</string>
+    <string name="gitHubRepoUrl">https://github.com/BlackGhost0051/FakeGPS</string>
+
+    <string name="open">開く</string>
+    <string name="close">閉じる</string>
+
+    <string name="menu_map">マップ</string>
+    <string name="menu_script">スクリプト</string>
+    <string name="menu_settings">設定</string>
+    <string name="menu_info">情報</string>
+
+    <string name="info_description">あなたのGPS位置情報を偽装するシンプルなAndroidアプリ。マップ上で任意の場所を設定するか、自動移動スクリプトを実行します。</string>
+    <string name="info_version_label">バージョン</string>
+    <string name="info_developer_label">開発者</string>
+    <string name="info_developer_name">BlackGhost</string>
+    <string name="info_github_label">GitHub</string>
+    <string name="info_repo_label">リポジトリ</string>
+    <string name="info_opensource_label">オープンソース</string>
+    <string name="info_opensource_value">はい</string>
+    <string name="info_section_about">について</string>
+    <string name="info_section_links">リンク</string>
+
+
+    <string name="script_start_button">開始</string>
+    <string name="script_default_location">!23.456, 123.456</string>
+
+    <string name="map_my_location_btn_description">現在地</string>
+    <string name="map_search_hint">場所を検索…</string>
+
+    <string name="toast_test">TEST----IN</string>
+    <string name="toast_set_location">位置情報を設定</string>
+    <string name="toast_location_not_found">場所が見つかりません</string>
+    <string name="toast_error_finding_location">場所の検索中にエラーが発生しました</string>
+    <string name="toast_location_permission_required">位置情報の権限が必要です！</string>
+    <string name="toast_unable_to_retrieve_location">現在の位置情報を取得できません</string>
+
+    <string name="preferences_language_title">言語</string>
+    <string name="preferences_language_summary">優先する言語を選択してください</string>
+    <string name="language_system_default">システムのデフォルト</string>
+    <string name="preferences_dark_theme_title">ダークテーマ</string>
+    <string name="preferences_dark_theme_summary">ライトモードとダークモードを切り替えます。</string>
+    <string name="preferences_save_map_title">マップを保存</string>
+    <string name="preferences_save_map_summary">最後の位置、ズーム、回転を保存します。</string>
+</resources>
