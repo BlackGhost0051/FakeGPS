@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Fake GPS</string>
+    <string name="app_version">0.1</string>
+
+    <string name="gitHubUrl">https://github.com/BlackGhost0051</string>
+    <string name="gitHubRepoUrl">https://github.com/BlackGhost0051/FakeGPS</string>
+
+    <string name="open">buka</string>
+    <string name="close">tutup</string>
+
+    <string name="menu_map">Peta</string>
+    <string name="menu_script">Skrip</string>
+    <string name="menu_settings">Pengaturan</string>
+    <string name="menu_info">Informasi</string>
+
+    <string name="info_description">Aplikasi Android sederhana untuk memalsukan lokasi GPS Anda. Tetapkan lokasi apa pun di peta atau jalankan skrip gerakan otomatis.</string>
+    <string name="info_version_label">Versi</string>
+    <string name="info_developer_label">Pengembang</string>
+    <string name="info_developer_name">BlackGhost</string>
+    <string name="info_github_label">GitHub</string>
+    <string name="info_repo_label">Repositori</string>
+    <string name="info_opensource_label">Sumber Terbuka</string>
+    <string name="info_opensource_value">Ya</string>
+    <string name="info_section_about">Tentang</string>
+    <string name="info_section_links">Tautan</string>
+
+
+    <string name="script_start_button">Mulai</string>
+    <string name="script_default_location">!23.456, 123.456</string>
+
+    <string name="map_my_location_btn_description">Lokasi saya</string>
+    <string name="map_search_hint">Cari lokasi…</string>
+
+    <string name="toast_test">TES----MASUK</string>
+    <string name="toast_set_location">Atur Lokasi</string>
+    <string name="toast_location_not_found">Lokasi tidak ditemukan</string>
+    <string name="toast_error_finding_location">Kesalahan menemukan lokasi</string>
+    <string name="toast_location_permission_required">Izin lokasi diperlukan!</string>
+    <string name="toast_unable_to_retrieve_location">Tidak dapat mengambil lokasi saat ini</string>
+
+    <string name="preferences_language_title">Bahasa</string>
+    <string name="preferences_language_summary">Pilih bahasa pilihan Anda</string>
+    <string name="language_system_default">Bawaan sistem</string>
+    <string name="preferences_dark_theme_title">Tema gelap</string>
+    <string name="preferences_dark_theme_summary">Beralih antara mode terang dan gelap.</string>
+    <string name="preferences_save_map_title">Simpan peta</string>
+    <string name="preferences_save_map_summary">Simpan posisi, zoom, dan rotasi terakhir.</string>
+</resources>
