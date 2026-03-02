@@ -14,6 +14,7 @@
         <item>Svenska</item>
         <item>Türkçe</item>
         <item>Українська</item>
+        <item>Tiếng Việt</item>
         <item>中文</item>
         <item>@string/language_system_default</item>
     </string-array>
@@ -32,6 +33,7 @@
         <item>sv</item>
         <item>tr</item>
         <item>uk</item>
+        <item>vi</item>
         <item>zh</item>
         <item>system</item>
     </string-array>

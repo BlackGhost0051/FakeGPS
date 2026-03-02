@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Fake GPS</string>
+    <string name="app_version">0.1</string>
+
+    <string name="gitHubUrl">https://github.com/BlackGhost0051</string>
+    <string name="gitHubRepoUrl">https://github.com/BlackGhost0051/FakeGPS</string>
+
+    <string name="open">mở</string>
+    <string name="close">đóng</string>
+
+    <string name="menu_map">Bản đồ</string>
+    <string name="menu_script">Kịch bản</string>
+    <string name="menu_settings">Cài đặt</string>
+    <string name="menu_info">Thông tin</string>
+
+    <string name="info_description">Một ứng dụng Android đơn giản để giả mạo vị trí GPS của bạn. Đặt bất kỳ vị trí nào trên bản đồ hoặc chạy các kịch bản di chuyển tự động.</string>
+    <string name="info_version_label">Phiên bản</string>
+    <string name="info_developer_label">Nhà phát triển</string>
+    <string name="info_developer_name">BlackGhost</string>
+    <string name="info_github_label">GitHub</string>
+    <string name="info_repo_label">Kho lưu trữ</string>
+    <string name="info_opensource_label">Mã nguồn mở</string>
+    <string name="info_opensource_value">Có</string>
+    <string name="info_section_about">Giới thiệu</string>
+    <string name="info_section_links">Liên kết</string>
+
+
+    <string name="script_start_button">Bắt đầu</string>
+    <string name="script_default_location">!23.456, 123.456</string>
+
+    <string name="map_my_location_btn_description">Vị trí của tôi</string>
+    <string name="map_search_hint">Tìm kiếm vị trí…</string>
+
+    <string name="toast_test">KIỂM TRA----VÀO</string>
+    <string name="toast_set_location">Đặt vị trí</string>
+    <string name="toast_location_not_found">Không tìm thấy vị trí</string>
+    <string name="toast_error_finding_location">Lỗi khi tìm vị trí</string>
+    <string name="toast_location_permission_required">Yêu cầu quyền truy cập vị trí!</string>
+    <string name="toast_unable_to_retrieve_location">Không thể lấy vị trí hiện tại</string>
+
+    <string name="preferences_language_title">Ngôn ngữ</string>
+    <string name="preferences_language_summary">Chọn ngôn ngữ ưa thích của bạn</string>
+    <string name="language_system_default">Mặc định hệ thống</string>
+    <string name="preferences_dark_theme_title">Chế độ tối</string>
+    <string name="preferences_dark_theme_summary">Chuyển đổi giữa chế độ sáng và tối.</string>
+    <string name="preferences_save_map_title">Lưu bản đồ</string>
+    <string name="preferences_save_map_summary">Lưu vị trí, thu phóng và xoay cuối cùng.</string>
+</resources>
