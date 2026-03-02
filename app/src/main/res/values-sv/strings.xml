@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Fake GPS</string>
+    <string name="app_version">0.1</string>
+
+    <string name="gitHubUrl">https://github.com/BlackGhost0051</string>
+    <string name="gitHubRepoUrl">https://github.com/BlackGhost0051/FakeGPS</string>
+
+    <string name="open">öppna</string>
+    <string name="close">stäng</string>
+
+    <string name="menu_map">Karta</string>
+    <string name="menu_script">Skript</string>
+    <string name="menu_settings">Inställningar</string>
+    <string name="menu_info">Information</string>
+
+    <string name="info_description">En enkel Android-app för att förfalska din GPS-position. Ange valfri plats på kartan eller kör automatiserade rörelseskript.</string>
+    <string name="info_version_label">Version</string>
+    <string name="info_developer_label">Utvecklare</string>
+    <string name="info_developer_name">BlackGhost</string>
+    <string name="info_github_label">GitHub</string>
+    <string name="info_repo_label">Repository</string>
+    <string name="info_opensource_label">Öppen Källkod</string>
+    <string name="info_opensource_value">Ja</string>
+    <string name="info_section_about">Om</string>
+    <string name="info_section_links">Länkar</string>
+
+
+    <string name="script_start_button">Starta</string>
+    <string name="script_default_location">!23.456, 123.456</string>
+
+    <string name="map_my_location_btn_description">Min plats</string>
+    <string name="map_search_hint">Sök plats…</string>
+
+    <string name="toast_test">TEST----IN</string>
+    <string name="toast_set_location">Ange Plats</string>
+    <string name="toast_location_not_found">Platsen hittades inte</string>
+    <string name="toast_error_finding_location">Fel vid sökning av plats</string>
+    <string name="toast_location_permission_required">Platstillstånd krävs!</string>
+    <string name="toast_unable_to_retrieve_location">Kan inte hämta aktuell plats</string>
+
+    <string name="preferences_language_title">Språk</string>
+    <string name="preferences_language_summary">Välj önskat språk</string>
+    <string name="language_system_default">Systemstandard</string>
+    <string name="preferences_dark_theme_title">Mörkt tema</string>
+    <string name="preferences_dark_theme_summary">Växla mellan ljust och mörkt läge.</string>
+    <string name="preferences_save_map_title">Spara karta</string>
+    <string name="preferences_save_map_summary">Spara senaste position, zoom och rotation.</string>
+</resources>
