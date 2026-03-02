@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Fake GPS</string>
+    <string name="app_version">0.1</string>
+
+    <string name="gitHubUrl">https://github.com/BlackGhost0051</string>
+    <string name="gitHubRepoUrl">https://github.com/BlackGhost0051/FakeGPS</string>
+
+    <string name="open">열기</string>
+    <string name="close">닫기</string>
+
+    <string name="menu_map">지도</string>
+    <string name="menu_script">스크립트</string>
+    <string name="menu_settings">설정</string>
+    <string name="menu_info">정보</string>
+
+    <string name="info_description">GPS 위치를 속일 수 있는 간단한 안드로이드 앱입니다. 지도에서 원하는 위치를 설정하거나 자동 이동 스크립트를 실행할 수 있습니다.</string>
+    <string name="info_version_label">버전</string>
+    <string name="info_developer_label">개발자</string>
+    <string name="info_developer_name">BlackGhost</string>
+    <string name="info_github_label">GitHub</string>
+    <string name="info_repo_label">저장소</string>
+    <string name="info_opensource_label">오픈 소스</string>
+    <string name="info_opensource_value">예</string>
+    <string name="info_section_about">정보</string>
+    <string name="info_section_links">링크</string>
+
+
+    <string name="script_start_button">시작</string>
+    <string name="script_default_location">!23.456, 123.456</string>
+
+    <string name="map_my_location_btn_description">내 위치</string>
+    <string name="map_search_hint">위치 검색…</string>
+
+    <string name="toast_test">테스트----입력</string>
+    <string name="toast_set_location">위치 설정</string>
+    <string name="toast_location_not_found">위치를 찾을 수 없습니다</string>
+    <string name="toast_error_finding_location">위치 찾기 오류</string>
+    <string name="toast_location_permission_required">위치 권한이 필요합니다!</string>
+    <string name="toast_unable_to_retrieve_location">현재 위치를 가져올 수 없습니다</string>
+
+    <string name="preferences_language_title">언어</string>
+    <string name="preferences_language_summary">선호하는 언어를 선택하세요</string>
+    <string name="language_system_default">시스템 기본값</string>
+    <string name="preferences_dark_theme_title">다크 테마</string>
+    <string name="preferences_dark_theme_summary">라이트 모드와 다크 모드를 전환합니다.</string>
+    <string name="preferences_save_map_title">지도 저장</string>
+    <string name="preferences_save_map_summary">마지막 위치, 확대/축소 및 회전을 저장합니다.</string>
+</resources>
