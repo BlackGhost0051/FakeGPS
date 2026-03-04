@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Fake GPS</string>
+    <string name="app_version">0.1</string>
+
+    <string name="gitHubUrl">https://github.com/BlackGhost0051</string>
+    <string name="gitHubRepoUrl">https://github.com/BlackGhost0051/FakeGPS</string>
+
+    <string name="open">فتح</string>
+    <string name="close">إغلاق</string>
+
+    <string name="menu_map">الخريطة</string>
+    <string name="menu_script">السكريبت</string>
+    <string name="menu_settings">الإعدادات</string>
+    <string name="menu_info">معلومات</string>
+
+    <string name="info_description">تطبيق أندرويد بسيط لتزييف موقع GPS الخاص بك. اختر أي موقع على الخريطة أو قم بتشغيل سكريبتات الحركة التلقائية.</string>
+    <string name="info_version_label">الإصدار</string>
+    <string name="info_developer_label">المطور</string>
+    <string name="info_developer_name">BlackGhost</string>
+    <string name="info_github_label">GitHub</string>
+    <string name="info_repo_label">المستودع</string>
+    <string name="info_opensource_label">مفتوح المصدر</string>
+    <string name="info_opensource_value">نعم</string>
+    <string name="info_section_about">حول</string>
+    <string name="info_section_links">الروابط</string>
+
+
+    <string name="script_start_button">ابدأ</string>
+    <string name="script_default_location">!23.456, 123.456</string>
+
+    <string name="map_my_location_btn_description">موقعي</string>
+    <string name="map_search_hint">البحث عن موقع…</string>
+
+    <string name="toast_test">TEST----IN</string>
+    <string name="toast_set_location">تعيين الموقع</string>
+    <string name="toast_location_not_found">الموقع غير موجود</string>
+    <string name="toast_error_finding_location">خطأ في العثور على الموقع</string>
+    <string name="toast_location_permission_required">إذن الموقع مطلوب!</string>
+    <string name="toast_unable_to_retrieve_location">تعذر استرجاع الموقع الحالي</string>
+
+    <string name="preferences_language_title">اللغة</string>
+    <string name="preferences_language_summary">اختر اللغة المفضلة لديك</string>
+    <string name="language_system_default">افتراضي النظام</string>
+    <string name="preferences_dark_theme_title">الوضع الداكن</string>
+    <string name="preferences_dark_theme_summary">التبديل بين الوضع الفاتح والداكن.</string>
+    <string name="preferences_save_map_title">حفظ الخريطة</string>
+    <string name="preferences_save_map_summary">حفظ آخر موضع وتكبير ودوران.</string>
+</resources>
