@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Fake GPS</string>
+    <string name="app_version">0.1</string>
+
+    <string name="gitHubUrl">https://github.com/BlackGhost0051</string>
+    <string name="gitHubRepoUrl">https://github.com/BlackGhost0051/FakeGPS</string>
+
+    <string name="open">खोलें</string>
+    <string name="close">बंद करें</string>
+
+    <string name="menu_map">मानचित्र</string>
+    <string name="menu_script">स्क्रिप्ट</string>
+    <string name="menu_settings">सेटिंग्स</string>
+    <string name="menu_info">जानकारी</string>
+
+    <string name="info_description">अपने GPS स्थान को बदलने के लिए एक सरल Android ऐप। मानचित्र पर कोई भी स्थान सेट करें या स्वचालित गति स्क्रिप्ट चलाएं।</string>
+    <string name="info_version_label">संस्करण</string>
+    <string name="info_developer_label">डेवलपर</string>
+    <string name="info_developer_name">BlackGhost</string>
+    <string name="info_github_label">GitHub</string>
+    <string name="info_repo_label">रिपॉजिटरी</string>
+    <string name="info_opensource_label">ओपन सोर्स</string>
+    <string name="info_opensource_value">हाँ</string>
+    <string name="info_section_about">बारे में</string>
+    <string name="info_section_links">लिंक</string>
+
+
+    <string name="script_start_button">शुरू करें</string>
+    <string name="script_default_location">!23.456, 123.456</string>
+
+    <string name="map_my_location_btn_description">मेरा स्थान</string>
+    <string name="map_search_hint">स्थान खोजें…</string>
+
+    <string name="toast_test">TEST----IN</string>
+    <string name="toast_set_location">स्थान सेट करें</string>
+    <string name="toast_location_not_found">स्थान नहीं मिला</string>
+    <string name="toast_error_finding_location">स्थान खोजने में त्रुटि</string>
+    <string name="toast_location_permission_required">स्थान अनुमति आवश्यक है!</string>
+    <string name="toast_unable_to_retrieve_location">वर्तमान स्थान प्राप्त करने में असमर्थ</string>
+
+    <string name="preferences_language_title">भाषा</string>
+    <string name="preferences_language_summary">अपनी पसंदीदा भाषा चुनें</string>
+    <string name="language_system_default">सिस्टम डिफ़ॉल्ट</string>
+    <string name="preferences_dark_theme_title">डार्क थीम</string>
+    <string name="preferences_dark_theme_summary">लाइट और डार्क मोड के बीच स्विच करें।</string>
+    <string name="preferences_save_map_title">मानचित्र सहेजें</string>
+    <string name="preferences_save_map_summary">अंतिम स्थिति, ज़ूम और रोटेशन सहेजें।</string>
+</resources>
