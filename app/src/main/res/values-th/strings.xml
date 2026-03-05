@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Fake GPS</string>
+    <string name="app_version">0.1</string>
+
+    <string name="gitHubUrl">https://github.com/BlackGhost0051</string>
+    <string name="gitHubRepoUrl">https://github.com/BlackGhost0051/FakeGPS</string>
+
+    <string name="open">เปิด</string>
+    <string name="close">ปิด</string>
+
+    <string name="menu_map">แผนที่</string>
+    <string name="menu_script">สคริปต์</string>
+    <string name="menu_settings">การตั้งค่า</string>
+    <string name="menu_info">ข้อมูล</string>
+
+    <string name="info_description">แอปพลิเคชัน Android ง่ายๆ สำหรับปลอมตำแหน่ง GPS ตั้งตำแหน่งใดๆ บนแผนที่หรือรันสคริปต์การเคลื่อนที่อัตโนมัติ</string>
+    <string name="info_version_label">เวอร์ชัน</string>
+    <string name="info_developer_label">ผู้พัฒนา</string>
+    <string name="info_developer_name">BlackGhost</string>
+    <string name="info_github_label">GitHub</string>
+    <string name="info_repo_label">ที่เก็บ</string>
+    <string name="info_opensource_label">โอเพนซอร์ส</string>
+    <string name="info_opensource_value">ใช่</string>
+    <string name="info_section_about">เกี่ยวกับ</string>
+    <string name="info_section_links">ลิงก์</string>
+
+
+    <string name="script_start_button">เริ่ม</string>
+    <string name="script_default_location">!23.456, 123.456</string>
+
+    <string name="map_my_location_btn_description">ตำแหน่งของฉัน</string>
+    <string name="map_search_hint">ค้นหาตำแหน่ง…</string>
+
+    <string name="toast_test">TEST----IN</string>
+    <string name="toast_set_location">ตั้งค่าตำแหน่ง</string>
+    <string name="toast_location_not_found">ไม่พบตำแหน่ง</string>
+    <string name="toast_error_finding_location">ข้อผิดพลาดในการค้นหาตำแหน่ง</string>
+    <string name="toast_location_permission_required">ต้องการสิทธิ์เข้าถึงตำแหน่ง!</string>
+    <string name="toast_unable_to_retrieve_location">ไม่สามารถดึงตำแหน่งปัจจุบันได้</string>
+
+    <string name="preferences_language_title">ภาษา</string>
+    <string name="preferences_language_summary">เลือกภาษาที่ต้องการ</string>
+    <string name="language_system_default">ค่าเริ่มต้นของระบบ</string>
+    <string name="preferences_dark_theme_title">ธีมมืด</string>
+    <string name="preferences_dark_theme_summary">สลับระหว่างโหมดสว่างและโหมดมืด</string>
+    <string name="preferences_save_map_title">บันทึกแผนที่</string>
+    <string name="preferences_save_map_summary">บันทึกตำแหน่ง ระดับซูม และการหวนล่าสุด</string>
+</resources>
