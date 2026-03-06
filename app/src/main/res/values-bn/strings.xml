@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Fake GPS</string>
+    <string name="app_version">0.1</string>
+
+    <string name="gitHubUrl">https://github.com/BlackGhost0051</string>
+    <string name="gitHubRepoUrl">https://github.com/BlackGhost0051/FakeGPS</string>
+
+    <string name="open">খুলুন</string>
+    <string name="close">বন্ধ করুন</string>
+
+    <string name="menu_map">মানচিত্র</string>
+    <string name="menu_script">স্ক্রিপ্ট</string>
+    <string name="menu_settings">সেটিংস</string>
+    <string name="menu_info">তথ্য</string>
+
+    <string name="info_description">আপনার GPS অবস্থান প্রতারণা করার জন্য একটি সাধারণ অ্যান্ড্রয়েড অ্যাপ। মানচিত্রে যেকোনো অবস্থান সেট করুন বা স্বয়ংক্রিয় চলাচল স্ক্রিপ্ট চালান।</string>
+    <string name="info_version_label">সংস্করণ</string>
+    <string name="info_developer_label">ডেভেলপার</string>
+    <string name="info_developer_name">BlackGhost</string>
+    <string name="info_github_label">GitHub</string>
+    <string name="info_repo_label">রিপোজিটরি</string>
+    <string name="info_opensource_label">ওপেন সোর্স</string>
+    <string name="info_opensource_value">হ্যাঁ</string>
+    <string name="info_section_about">সম্পর্কে</string>
+    <string name="info_section_links">লিংক</string>
+
+
+    <string name="script_start_button">শুরু করুন</string>
+    <string name="script_default_location">!23.456, 123.456</string>
+
+    <string name="map_my_location_btn_description">আমার অবস্থান</string>
+    <string name="map_search_hint">অবস্থান খুঁজুন…</string>
+
+    <string name="toast_test">TEST----IN</string>
+    <string name="toast_set_location">অবস্থান সেট করুন</string>
+    <string name="toast_location_not_found">অবস্থান পাওয়া যায়নি</string>
+    <string name="toast_error_finding_location">অবস্থান খোঁজার ত্রুটি</string>
+    <string name="toast_location_permission_required">অবস্থানের অনুমতি প্রয়োজন!</string>
+    <string name="toast_unable_to_retrieve_location">বর্তমান অবস্থান পুনরুদ্ধার করতে অক্ষম</string>
+
+    <string name="preferences_language_title">ভাষা</string>
+    <string name="preferences_language_summary">আপনার পছন্দের ভাষা চয়ন করুন</string>
+    <string name="language_system_default">সিস্টেম ডিফল্ট</string>
+    <string name="preferences_dark_theme_title">ডার্ক থিম</string>
+    <string name="preferences_dark_theme_summary">হালকা এবং ডার্ক মোডের মধ্যে পরিবর্তন করুন।</string>
+    <string name="preferences_save_map_title">মানচিত্র সংরক্ষণ করুন</string>
+    <string name="preferences_save_map_summary">শেষ অবস্থান, জুম এবং ঘূর্ণন সংরক্ষণ করুন।</string>
+</resources>

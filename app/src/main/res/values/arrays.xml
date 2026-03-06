@@ -2,6 +2,7 @@
 <resources>
     <string-array name="language_entries">
         <item>العربية</item>
+        <item>বাংলা</item>
         <item>English</item>
         <item>Español</item>
         <item>Français</item>
@@ -27,6 +28,7 @@
 
     <string-array name="language_values">
         <item>ar</item>
+        <item>bn</item>
         <item>en</item>
         <item>es</item>
         <item>fr</item>
