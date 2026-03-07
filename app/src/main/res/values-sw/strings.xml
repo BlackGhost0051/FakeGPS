@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Fake GPS</string>
+    <string name="app_version">0.1</string>
+
+    <string name="gitHubUrl">https://github.com/BlackGhost0051</string>
+    <string name="gitHubRepoUrl">https://github.com/BlackGhost0051/FakeGPS</string>
+
+    <string name="open">fungua</string>
+    <string name="close">funga</string>
+
+    <string name="menu_map">Ramani</string>
+    <string name="menu_script">Hati</string>
+    <string name="menu_settings">Mipangilio</string>
+    <string name="menu_info">Taarifa</string>
+
+    <string name="info_description">Programu rahisi ya Android kubadilisha eneo lako la GPS. Weka eneo lolote kwenye ramani au endesha hati za mwendo wa kiotomatiki.</string>
+    <string name="info_version_label">Toleo</string>
+    <string name="info_developer_label">Msanidi Programu</string>
+    <string name="info_developer_name">BlackGhost</string>
+    <string name="info_github_label">GitHub</string>
+    <string name="info_repo_label">Hifadhi</string>
+    <string name="info_opensource_label">Chanzo Wazi</string>
+    <string name="info_opensource_value">Ndio</string>
+    <string name="info_section_about">Kuhusu</string>
+    <string name="info_section_links">Viungo</string>
+
+
+    <string name="script_start_button">Anza</string>
+    <string name="script_default_location">!23.456, 123.456</string>
+
+    <string name="map_my_location_btn_description">Eneo langu</string>
+    <string name="map_search_hint">Tafuta eneo…</string>
+
+    <string name="toast_test">TEST----IN</string>
+    <string name="toast_set_location">Weka Eneo</string>
+    <string name="toast_location_not_found">Eneo halikupatikana</string>
+    <string name="toast_error_finding_location">Hitilafu katika kutafuta eneo</string>
+    <string name="toast_location_permission_required">Ruhusa ya eneo inahitajika!</string>
+    <string name="toast_unable_to_retrieve_location">Haiwezekani kupata eneo la sasa</string>
+
+    <string name="preferences_language_title">Lugha</string>
+    <string name="preferences_language_summary">Chagua lugha unayopendelea</string>
+    <string name="language_system_default">Chaguo-msingi la mfumo</string>
+    <string name="preferences_dark_theme_title">Mandhari ya giza</string>
+    <string name="preferences_dark_theme_summary">Badilisha kati ya hali ya mwanga na giza.</string>
+    <string name="preferences_save_map_title">Hifadhi ramani</string>
+    <string name="preferences_save_map_summary">Hifadhi nafasi ya mwisho, ukuzaji na mzunguko.</string>
+</resources>
