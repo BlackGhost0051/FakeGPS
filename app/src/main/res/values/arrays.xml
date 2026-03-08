@@ -22,6 +22,7 @@
         <item>ไทย</item>
         <item>Türkçe</item>
         <item>Українська</item>
+        <item>اردو</item>
         <item>Tiếng Việt</item>
         <item>中文</item>
         <item>@string/language_system_default</item>
@@ -49,6 +50,7 @@
         <item>th</item>
         <item>tr</item>
         <item>uk</item>
+        <item>ur</item>
         <item>vi</item>
         <item>zh</item>
         <item>system</item>

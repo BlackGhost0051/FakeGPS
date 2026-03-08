@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Fake GPS</string>
+    <string name="app_version">0.1</string>
+
+    <string name="gitHubUrl">https://github.com/BlackGhost0051</string>
+    <string name="gitHubRepoUrl">https://github.com/BlackGhost0051/FakeGPS</string>
+
+    <string name="open">کھولیں</string>
+    <string name="close">بند کریں</string>
+
+    <string name="menu_map">نقشہ</string>
+    <string name="menu_script">اسکرپٹ</string>
+    <string name="menu_settings">ترتیبات</string>
+    <string name="menu_info">معلومات</string>
+
+    <string name="info_description">آپ کی GPS لوکیشن کو جعلی بنانے کے لیے ایک سادہ اینڈرائیڈ ایپ۔ نقشے پر کوئی بھی مقام سیٹ کریں یا خودکار حرکت اسکرپٹ چلائیں۔</string>
+    <string name="info_version_label">ورژن</string>
+    <string name="info_developer_label">ڈویلپر</string>
+    <string name="info_developer_name">BlackGhost</string>
+    <string name="info_github_label">GitHub</string>
+    <string name="info_repo_label">ریپوزٹری</string>
+    <string name="info_opensource_label">اوپن سورس</string>
+    <string name="info_opensource_value">ہاں</string>
+    <string name="info_section_about">کے بارے میں</string>
+    <string name="info_section_links">لنکس</string>
+
+
+    <string name="script_start_button">شروع کریں</string>
+    <string name="script_default_location">!23.456, 123.456</string>
+
+    <string name="map_my_location_btn_description">میری لوکیشن</string>
+    <string name="map_search_hint">مقام تلاش کریں…</string>
+
+    <string name="toast_test">TEST----IN</string>
+    <string name="toast_set_location">مقام سیٹ کریں</string>
+    <string name="toast_location_not_found">مقام نہیں ملا</string>
+    <string name="toast_error_finding_location">مقام تلاش کرنے میں خرابی</string>
+    <string name="toast_location_permission_required">مقام کی اجازت درکار ہے!</string>
+    <string name="toast_unable_to_retrieve_location">موجودہ مقام حاصل کرنے میں ناکام</string>
+
+    <string name="preferences_language_title">زبان</string>
+    <string name="preferences_language_summary">اپنی پسندیدہ زبان منتخب کریں</string>
+    <string name="language_system_default">سسٹم ڈیفالٹ</string>
+    <string name="preferences_dark_theme_title">ڈارک تھیم</string>
+    <string name="preferences_dark_theme_summary">روشن اور تاریک موڈ کے درمیان سوئچ کریں۔</string>
+    <string name="preferences_save_map_title">نقشہ محفوظ کریں</string>
+    <string name="preferences_save_map_summary">آخری پوزیشن، زوم اور گردش محفوظ کریں۔</string>
+</resources>
