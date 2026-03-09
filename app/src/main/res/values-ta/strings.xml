@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Fake GPS</string>
+    <string name="app_version">0.1</string>
+
+    <string name="gitHubUrl">https://github.com/BlackGhost0051</string>
+    <string name="gitHubRepoUrl">https://github.com/BlackGhost0051/FakeGPS</string>
+
+    <string name="open">திற</string>
+    <string name="close">மூடு</string>
+
+    <string name="menu_map">வரைபடம்</string>
+    <string name="menu_script">ஸ்கிரிப்ட்</string>
+    <string name="menu_settings">அமைப்புகள்</string>
+    <string name="menu_info">தகவல்</string>
+
+    <string name="info_description">உங்கள் GPS இருப்பிடத்தை போலியாக மாற்ற ஒரு எளிய Android பயன்பாடு. வரைபடத்தில் எந்த இருப்பிடத்தையும் அமைக்கவும் அல்லது தானியங்கு இயக்க ஸ்கிரிப்ட்களை இயக்கவும்.</string>
+    <string name="info_version_label">பதிப்பு</string>
+    <string name="info_developer_label">உருவாக்குநர்</string>
+    <string name="info_developer_name">BlackGhost</string>
+    <string name="info_github_label">GitHub</string>
+    <string name="info_repo_label">களஞ்சியம்</string>
+    <string name="info_opensource_label">திறந்த மூல</string>
+    <string name="info_opensource_value">ஆம்</string>
+    <string name="info_section_about">பற்றி</string>
+    <string name="info_section_links">இணைப்புகள்</string>
+
+
+    <string name="script_start_button">தொடங்கு</string>
+    <string name="script_default_location">!23.456, 123.456</string>
+
+    <string name="map_my_location_btn_description">எனது இருப்பிடம்</string>
+    <string name="map_search_hint">இருப்பிடத்தைத் தேடு…</string>
+
+    <string name="toast_test">சோதனை----IN</string>
+    <string name="toast_set_location">இருப்பிடத்தை அமை</string>
+    <string name="toast_location_not_found">இருப்பிடம் கிடைக்கவில்லை</string>
+    <string name="toast_error_finding_location">இருப்பிடத்தைக் கண்டறிவதில் பிழை</string>
+    <string name="toast_location_permission_required">இருப்பிட அனுமதி தேவை!</string>
+    <string name="toast_unable_to_retrieve_location">தற்போதைய இருப்பிடத்தை மீட்டெடுக்க முடியவில்லை</string>
+
+    <string name="preferences_language_title">மொழி</string>
+    <string name="preferences_language_summary">உங்களுக்கு விருப்பமான மொழியைத் தேர்ந்தெடுக்கவும்</string>
+    <string name="language_system_default">கணினி இயல்புநிலை</string>
+    <string name="preferences_dark_theme_title">இருண்ட தீம்</string>
+    <string name="preferences_dark_theme_summary">வெளிச்ச மற்றும் இருண்ட பயன்முறைக்கு இடையே மாறவும்.</string>
+    <string name="preferences_save_map_title">வரைபடத்தை சேமி</string>
+    <string name="preferences_save_map_summary">கடைசி நிலை, பெரிதாக்கம் மற்றும் சுழற்சியை சேமிக்கவும்.</string>
+</resources>
