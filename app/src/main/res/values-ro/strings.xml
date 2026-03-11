@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Fake GPS</string>
+    <string name="app_version">0.1</string>
+
+    <string name="gitHubUrl">https://github.com/BlackGhost0051</string>
+    <string name="gitHubRepoUrl">https://github.com/BlackGhost0051/FakeGPS</string>
+
+    <string name="open">Deschide</string>
+    <string name="close">Închide</string>
+
+    <string name="menu_map">Hartă</string>
+    <string name="menu_script">Script</string>
+    <string name="menu_settings">Setări</string>
+    <string name="menu_info">Info</string>
+
+    <string name="info_description">O aplicație Android simplă pentru a falsifica locația GPS. Setați orice locație pe hartă sau rulați scripturi de mișcare automată.</string>
+    <string name="info_version_label">Versiune</string>
+    <string name="info_developer_label">Dezvoltator</string>
+    <string name="info_developer_name">BlackGhost</string>
+    <string name="info_github_label">GitHub</string>
+    <string name="info_repo_label">Depozit</string>
+    <string name="info_opensource_label">Sursă Deschisă</string>
+    <string name="info_opensource_value">Da</string>
+    <string name="info_section_about">Despre</string>
+    <string name="info_section_links">Linkuri</string>
+
+
+    <string name="script_start_button">Pornește</string>
+    <string name="script_default_location">!23.456, 123.456</string>
+
+    <string name="map_my_location_btn_description">Locația Mea</string>
+    <string name="map_search_hint">Caută locație…</string>
+
+    <string name="toast_test">TEST----IN</string>
+    <string name="toast_set_location">Setează Locația</string>
+    <string name="toast_location_not_found">Locația nu a fost găsită</string>
+    <string name="toast_error_finding_location">Eroare la găsirea locației</string>
+    <string name="toast_location_permission_required">Permisiunea de locație este necesară!</string>
+    <string name="toast_unable_to_retrieve_location">Nu se poate obține locația curentă</string>
+
+    <string name="preferences_language_title">Limba</string>
+    <string name="preferences_language_summary">Selectați limba preferată</string>
+    <string name="language_system_default">Implicit Sistem</string>
+    <string name="preferences_dark_theme_title">Temă Întunecată</string>
+    <string name="preferences_dark_theme_summary">Comutați între modul luminos și întunecat.</string>
+    <string name="preferences_save_map_title">Salvează Harta</string>
+    <string name="preferences_save_map_summary">Salvează ultima poziție, zoom și rotație.</string>
+</resources>
