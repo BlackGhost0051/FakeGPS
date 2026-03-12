@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Fake GPS</string>
+    <string name="app_version">0.1</string>
+
+    <string name="gitHubUrl">https://github.com/BlackGhost0051</string>
+    <string name="gitHubRepoUrl">https://github.com/BlackGhost0051/FakeGPS</string>
+
+    <string name="open">తెరువు</string>
+    <string name="close">మూసివేయి</string>
+
+    <string name="menu_map">మ్యాప్</string>
+    <string name="menu_script">స్క్రిప్ట్</string>
+    <string name="menu_settings">సెట్టింగ్‌లు</string>
+    <string name="menu_info">సమాచారం</string>
+
+    <string name="info_description">మీ GPS స్థానాన్ని స్పూఫ్ చేయడానికి ఒక సాధారణ Android యాప్. మ్యాప్‌లో ఏదైనా స్థానాన్ని సెట్ చేయండి లేదా ఆటోమేటెడ్ మూవ్‌మెంట్ స్క్రిప్ట్‌లను అమలు చేయండి.</string>
+    <string name="info_version_label">వెర్షన్</string>
+    <string name="info_developer_label">డెవలపర్</string>
+    <string name="info_developer_name">BlackGhost</string>
+    <string name="info_github_label">GitHub</string>
+    <string name="info_repo_label">రిపోజిటరీ</string>
+    <string name="info_opensource_label">ఓపెన్ సోర్స్</string>
+    <string name="info_opensource_value">అవును</string>
+    <string name="info_section_about">గురించి</string>
+    <string name="info_section_links">లింక్‌లు</string>
+
+
+    <string name="script_start_button">ప్రారంభించు</string>
+    <string name="script_default_location">!23.456, 123.456</string>
+
+    <string name="map_my_location_btn_description">నా స్థానం</string>
+    <string name="map_search_hint">స్థానాన్ని వెతకండి…</string>
+
+    <string name="toast_test">పరీక్ష----IN</string>
+    <string name="toast_set_location">స్థానాన్ని సెట్ చేయండి</string>
+    <string name="toast_location_not_found">స్థానం కనుగొనబడలేదు</string>
+    <string name="toast_error_finding_location">స్థానాన్ని కనుగొనడంలో లోపం</string>
+    <string name="toast_location_permission_required">స్థాన అనుమతి అవసరం!</string>
+    <string name="toast_unable_to_retrieve_location">ప్రస్తుత స్థానాన్ని తిరిగి పొందడం సాధ్యం కాలేదు</string>
+
+    <string name="preferences_language_title">భాష</string>
+    <string name="preferences_language_summary">మీకు ఇష్టమైన భాషను ఎంచుకోండి</string>
+    <string name="language_system_default">సిస్టమ్ డిఫాల్ట్</string>
+    <string name="preferences_dark_theme_title">డార్క్ థీమ్</string>
+    <string name="preferences_dark_theme_summary">లైట్ మరియు డార్క్ మోడ్ మధ్య మారండి.</string>
+    <string name="preferences_save_map_title">మ్యాప్ సేవ్ చేయండి</string>
+    <string name="preferences_save_map_summary">చివరి స్థానం, జూమ్ మరియు రొటేషన్‌ను సేవ్ చేయండి.</string>
+</resources>
