@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Fake GPS</string>
+    <string name="app_version">0.1</string>
+
+    <string name="gitHubUrl">https://github.com/BlackGhost0051</string>
+    <string name="gitHubRepoUrl">https://github.com/BlackGhost0051/FakeGPS</string>
+
+    <string name="open">उघडा</string>
+    <string name="close">बंद करा</string>
+
+    <string name="menu_map">नकाशा</string>
+    <string name="menu_script">स्क्रिप्ट</string>
+    <string name="menu_settings">सेटिंग्ज</string>
+    <string name="menu_info">माहिती</string>
+
+    <string name="info_description">तुमचे GPS स्थान स्पूफ करण्यासाठी एक साधे Android अॅप. नकाशावर कोणतेही स्थान सेट करा किंवा स्वयंचलित हालचाल स्क्रिप्ट चालवा.</string>
+    <string name="info_version_label">आवृत्ती</string>
+    <string name="info_developer_label">विकसक</string>
+    <string name="info_developer_name">BlackGhost</string>
+    <string name="info_github_label">GitHub</string>
+    <string name="info_repo_label">रिपॉझिटरी</string>
+    <string name="info_opensource_label">मुक्त स्रोत</string>
+    <string name="info_opensource_value">होय</string>
+    <string name="info_section_about">बद्दल</string>
+    <string name="info_section_links">दुवे</string>
+
+
+    <string name="script_start_button">सुरू करा</string>
+    <string name="script_default_location">!23.456, 123.456</string>
+
+    <string name="map_my_location_btn_description">माझे स्थान</string>
+    <string name="map_search_hint">स्थान शोधा…</string>
+
+    <string name="toast_test">चाचणी----IN</string>
+    <string name="toast_set_location">स्थान सेट करा</string>
+    <string name="toast_location_not_found">स्थान सापडले नाही</string>
+    <string name="toast_error_finding_location">स्थान शोधण्यात त्रुटी</string>
+    <string name="toast_location_permission_required">स्थान परवानगी आवश्यक आहे!</string>
+    <string name="toast_unable_to_retrieve_location">वर्तमान स्थान पुनर्प्राप्त करण्यात अक्षम</string>
+
+    <string name="preferences_language_title">भाषा</string>
+    <string name="preferences_language_summary">तुमची पसंतीची भाषा निवडा</string>
+    <string name="language_system_default">सिस्टम डीफॉल्ट</string>
+    <string name="preferences_dark_theme_title">गडद थीम</string>
+    <string name="preferences_dark_theme_summary">प्रकाश आणि गडद मोड दरम्यान स्विच करा.</string>
+    <string name="preferences_save_map_title">नकाशा जतन करा</string>
+    <string name="preferences_save_map_summary">शेवटची स्थिती, झूम आणि रोटेशन जतन करा.</string>
+</resources>
