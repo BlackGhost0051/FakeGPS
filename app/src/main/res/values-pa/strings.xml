@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Fake GPS</string>
+    <string name="app_version">0.1</string>
+
+    <string name="gitHubUrl">https://github.com/BlackGhost0051</string>
+    <string name="gitHubRepoUrl">https://github.com/BlackGhost0051/FakeGPS</string>
+
+    <string name="open">ਖੋਲ੍ਹੋ</string>
+    <string name="close">ਬੰਦ ਕਰੋ</string>
+
+    <string name="menu_map">ਨਕਸ਼ਾ</string>
+    <string name="menu_script">ਸਕ੍ਰਿਪਟ</string>
+    <string name="menu_settings">ਸੈਟਿੰਗਾਂ</string>
+    <string name="menu_info">ਜਾਣਕਾਰੀ</string>
+
+    <string name="info_description">ਤੁਹਾਡੇ GPS ਸਥਾਨ ਨੂੰ ਸਪੂਫ ਕਰਨ ਲਈ ਇੱਕ ਸਧਾਰਨ Android ਐਪ। ਨਕਸ਼ੇ ਤੇ ਕੋਈ ਵੀ ਸਥਾਨ ਸੈੱਟ ਕਰੋ ਜਾਂ ਸਵੈਚਲਿਤ ਮੂਵਮੈਂਟ ਸਕ੍ਰਿਪਟ ਚਲਾਓ।</string>
+    <string name="info_version_label">ਸੰਸਕਰਣ</string>
+    <string name="info_developer_label">ਵਿਕਾਸਕ</string>
+    <string name="info_developer_name">BlackGhost</string>
+    <string name="info_github_label">GitHub</string>
+    <string name="info_repo_label">ਰਿਪੋਜ਼ਟਰੀ</string>
+    <string name="info_opensource_label">ਓਪਨ ਸੋਰਸ</string>
+    <string name="info_opensource_value">ਹਾਂ</string>
+    <string name="info_section_about">ਬਾਰੇ</string>
+    <string name="info_section_links">ਲਿੰਕ</string>
+
+
+    <string name="script_start_button">ਸ਼ੁਰੂ ਕਰੋ</string>
+    <string name="script_default_location">!23.456, 123.456</string>
+
+    <string name="map_my_location_btn_description">ਮੇਰਾ ਸਥਾਨ</string>
+    <string name="map_search_hint">ਸਥਾਨ ਖੋਜੋ…</string>
+
+    <string name="toast_test">ਟੈਸਟ----IN</string>
+    <string name="toast_set_location">ਸਥਾਨ ਸੈੱਟ ਕਰੋ</string>
+    <string name="toast_location_not_found">ਸਥਾਨ ਨਹੀਂ ਮਿਲਿਆ</string>
+    <string name="toast_error_finding_location">ਸਥਾਨ ਲੱਭਣ ਵਿੱਚ ਤਰੁੱਟੀ</string>
+    <string name="toast_location_permission_required">ਸਥਾਨ ਇਜਾਜ਼ਤ ਲੋੜੀਂਦੀ ਹੈ!</string>
+    <string name="toast_unable_to_retrieve_location">ਮੌਜੂਦਾ ਸਥਾਨ ਪ੍ਰਾਪਤ ਕਰਨ ਵਿੱਚ ਅਸਮਰੱਥ</string>
+
+    <string name="preferences_language_title">ਭਾਸ਼ਾ</string>
+    <string name="preferences_language_summary">ਆਪਣੀ ਪਸੰਦੀਦਾ ਭਾਸ਼ਾ ਚੁਣੋ</string>
+    <string name="language_system_default">ਸਿਸਟਮ ਡਿਫਾਲਟ</string>
+    <string name="preferences_dark_theme_title">ਡਾਰਕ ਥੀਮ</string>
+    <string name="preferences_dark_theme_summary">ਲਾਈਟ ਅਤੇ ਡਾਰਕ ਮੋਡ ਵਿਚਕਾਰ ਸਵਿੱਚ ਕਰੋ।</string>
+    <string name="preferences_save_map_title">ਨਕਸ਼ਾ ਸੁਰੱਖਿਅਤ ਕਰੋ</string>
+    <string name="preferences_save_map_summary">ਆਖਰੀ ਸਥਿਤੀ, ਜ਼ੂਮ ਅਤੇ ਰੋਟੇਸ਼ਨ ਸੁਰੱਖਿਅਤ ਕਰੋ।</string>
+</resources>
