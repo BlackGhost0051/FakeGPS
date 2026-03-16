@@ -1,6 +1,8 @@
 package com.blackghost.fakegps;
 
+import android.Manifest;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.MenuItem;
@@ -12,6 +14,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
@@ -60,6 +64,9 @@ public class MainActivity extends AppCompatActivity implements MainActivityInter
         toggle.syncState();
 
         toggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.black));
+
+
+        locationRequestPermissions();
 
         fakeGPSManager = new FakeGPSManager(this);
         fakeGPSManager.initializeMockProvider();
@@ -121,5 +128,21 @@ public class MainActivity extends AppCompatActivity implements MainActivityInter
     public void setLocation() {
         fakeGPSManager.setLocation(36.1699, -115.1398, 5.0f, 2500);
         Toast.makeText(this, R.string.toast_set_location, Toast.LENGTH_SHORT).show();
+    }
+
+
+
+    private void locationRequestPermissions(){
+        if (ContextCompat.checkSelfPermission(
+                this, Manifest.permission.ACCESS_FINE_LOCATION) ==
+                PackageManager.PERMISSION_GRANTED) {
+        } else if (ActivityCompat.shouldShowRequestPermissionRationale(
+                this, Manifest.permission.ACCESS_FINE_LOCATION)) {
+
+        } else {
+            ActivityCompat.requestPermissions(this,
+                    new String[] { Manifest.permission.ACCESS_FINE_LOCATION },
+                    1);
+        }
     }
 }
