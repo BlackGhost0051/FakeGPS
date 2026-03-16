@@ -16,6 +16,8 @@ import com.blackghost.fakegps.R;
 
 
 import org.maplibre.android.MapLibre;
+import org.maplibre.android.camera.CameraPosition;
+import org.maplibre.android.geometry.LatLng;
 import org.maplibre.android.maps.MapLibreMap;
 import org.maplibre.android.maps.MapView;
 import org.maplibre.android.maps.OnMapReadyCallback;
@@ -68,7 +70,15 @@ public class MapFragment extends Fragment implements MainActivityInterface {
             public void onMapReady(@NonNull MapLibreMap map) {
                 mapLibreMap = map;
 
-                String styleUrl = "https://demotiles.maplibre.org/style.json";
+                mapLibreMap.getUiSettings().setRotateGesturesEnabled(false);
+
+                CameraPosition initialPosition = new CameraPosition.Builder()
+                        .target(new LatLng(20.0, 0.0))
+                        .zoom(2.0)
+                        .build();
+                mapLibreMap.setCameraPosition(initialPosition);
+
+                String styleUrl = "https://tiles.openfreemap.org/styles/liberty";
                 map.setStyle(styleUrl, new Style.OnStyleLoaded() {
                     @Override
                     public void onStyleLoaded(@NonNull Style style) {
