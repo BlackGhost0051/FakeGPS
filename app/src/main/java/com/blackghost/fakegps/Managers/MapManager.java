@@ -1,8 +1,15 @@
 package com.blackghost.fakegps.Managers;
 
 
+import android.content.Context;
+import android.os.Bundle;
+import android.view.View;
+
 import androidx.annotation.NonNull;
 
+import com.blackghost.fakegps.R;
+
+import org.maplibre.android.MapLibre;
 import org.maplibre.android.camera.CameraPosition;
 import org.maplibre.android.geometry.LatLng;
 import org.maplibre.android.maps.MapLibreMap;
@@ -20,10 +27,14 @@ public class MapManager {
     private final double startZoomLevel = 2.0;
     private final String tilesURL = "https://tiles.openfreemap.org/styles/liberty";
 
+    public static void initialize(Context context) {
+        MapLibre.getInstance(context);
+    }
 
+    public MapManager(Context context, View view, Bundle savedInstanceState){
+        mapView = view.findViewById(R.id.mapView);
+        mapView.onCreate(savedInstanceState);
 
-    public MapManager(MapView mapView){
-        this.mapView = mapView;
         initMap();
     }
 
@@ -59,4 +70,32 @@ public class MapManager {
 //        mapLibreMap.setZoom(); // need 3 arguments
     }
 
+
+    public void onStart() {
+        if (mapView != null) mapView.onStart();
+    }
+
+    public void onResume() {
+        if (mapView != null) mapView.onResume();
+    }
+
+    public void onPause() {
+        if (mapView != null) mapView.onPause();
+    }
+
+    public void onStop() {
+        if (mapView != null) mapView.onStop();
+    }
+
+    public void onSaveInstanceState(@NonNull Bundle outState) {
+        if (mapView != null) mapView.onSaveInstanceState(outState);
+    }
+
+    public void onLowMemory() {
+        if (mapView != null) mapView.onLowMemory();
+    }
+
+    public void onDestroy() {
+        if (mapView != null) mapView.onDestroy();
+    }
 }

@@ -16,15 +16,11 @@ import com.blackghost.fakegps.Managers.MapManager;
 import com.blackghost.fakegps.R;
 
 
-import org.maplibre.android.MapLibre;
-import org.maplibre.android.maps.MapView;
-
-
 public class MapFragment extends Fragment implements MainActivityInterface {
 
-    private MapView mapView;
 
     private FakeGPSManager fakeGPSManager;
+    private MapManager mapManager;
 
 //    private MainActivityInterface activityInterface;
 
@@ -44,44 +40,26 @@ public class MapFragment extends Fragment implements MainActivityInterface {
 //        }
     }
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        MapLibre.getInstance(requireContext());
-    }
-
-
     @NonNull
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        MapManager.initialize(requireContext());
+
         View view = inflater.inflate(R.layout.fragment_map, container, false);
 
-        mapView = view.findViewById(R.id.mapView);
-        mapView.onCreate(savedInstanceState);
-
-        MapManager mapManager = new MapManager(mapView);
+        mapManager = new MapManager(requireContext(), view, savedInstanceState);
 
         return view;
     }
 
-    @Override public void onStart() { super.onStart(); if (mapView != null) mapView.onStart(); }
-    @Override public void onResume() { super.onResume(); if (mapView != null) mapView.onResume(); }
-    @Override public void onPause() { super.onPause(); if (mapView != null) mapView.onPause(); }
-    @Override public void onStop() { super.onStop(); if (mapView != null) mapView.onStop(); }
-
-    @Override
-    public void onSaveInstanceState(@NonNull Bundle outState) {
-        super.onSaveInstanceState(outState);
-        mapView.onSaveInstanceState(outState);
-    }
-
-    @Override public void onLowMemory() { super.onLowMemory(); if (mapView != null) mapView.onLowMemory(); }
-
-    @Override public void onDestroyView() {
-        super.onDestroyView();
-        if (mapView != null) mapView.onDestroy();
-    }
+    @Override public void onStart() { super.onStart(); if (mapManager != null) mapManager.onStart(); }
+    @Override public void onResume() { super.onResume(); if (mapManager != null) mapManager.onResume(); }
+    @Override public void onPause() { super.onPause(); if (mapManager != null) mapManager.onPause(); }
+    @Override public void onStop() { super.onStop(); if (mapManager != null) mapManager.onStop(); }
+    @Override public void onSaveInstanceState(@NonNull Bundle outState) { super.onSaveInstanceState(outState); if (mapManager != null) mapManager.onSaveInstanceState(outState); }
+    @Override public void onLowMemory() { super.onLowMemory(); if (mapManager != null) mapManager.onLowMemory(); }
+    @Override public void onDestroyView() { super.onDestroyView(); if (mapManager != null) mapManager.onDestroy(); }
 
 
     @Override
