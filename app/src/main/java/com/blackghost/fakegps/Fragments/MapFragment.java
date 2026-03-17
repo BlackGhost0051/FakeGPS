@@ -12,22 +12,17 @@ import android.view.ViewGroup;
 
 import com.blackghost.fakegps.Interfaces.MainActivityInterface;
 import com.blackghost.fakegps.Managers.FakeGPSManager;
+import com.blackghost.fakegps.Managers.MapManager;
 import com.blackghost.fakegps.R;
 
 
 import org.maplibre.android.MapLibre;
-import org.maplibre.android.camera.CameraPosition;
-import org.maplibre.android.geometry.LatLng;
-import org.maplibre.android.maps.MapLibreMap;
 import org.maplibre.android.maps.MapView;
-import org.maplibre.android.maps.OnMapReadyCallback;
-import org.maplibre.android.maps.Style;
 
 
 public class MapFragment extends Fragment implements MainActivityInterface {
 
     private MapView mapView;
-    private MapLibreMap mapLibreMap;
 
     private FakeGPSManager fakeGPSManager;
 
@@ -65,28 +60,7 @@ public class MapFragment extends Fragment implements MainActivityInterface {
         mapView = view.findViewById(R.id.mapView);
         mapView.onCreate(savedInstanceState);
 
-        mapView.getMapAsync(new OnMapReadyCallback() {
-            @Override
-            public void onMapReady(@NonNull MapLibreMap map) {
-                mapLibreMap = map;
-
-                mapLibreMap.getUiSettings().setRotateGesturesEnabled(false);
-
-                CameraPosition initialPosition = new CameraPosition.Builder()
-                        .target(new LatLng(20.0, 0.0))
-                        .zoom(2.0)
-                        .build();
-                mapLibreMap.setCameraPosition(initialPosition);
-
-                String styleUrl = "https://tiles.openfreemap.org/styles/liberty";
-                map.setStyle(styleUrl, new Style.OnStyleLoaded() {
-                    @Override
-                    public void onStyleLoaded(@NonNull Style style) {
-                    }
-                });
-            }
-        });
-
+        MapManager mapManager = new MapManager(mapView);
 
         return view;
     }
