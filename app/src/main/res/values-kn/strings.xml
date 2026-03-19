@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Fake GPS</string>
+    <string name="app_version">0.1</string>
+
+    <string name="gitHubUrl">https://github.com/BlackGhost0051</string>
+    <string name="gitHubRepoUrl">https://github.com/BlackGhost0051/FakeGPS</string>
+
+    <string name="open">ತೆರೆಯಿರಿ</string>
+    <string name="close">ಮುಚ್ಚಿರಿ</string>
+
+    <string name="menu_map">ನಕ್ಷೆ</string>
+    <string name="menu_script">ಸ್ಕ್ರಿಪ್ಟ್</string>
+    <string name="menu_settings">ಸೆಟ್ಟಿಂಗ್‌ಗಳು</string>
+    <string name="menu_info">ಮಾಹಿತಿ</string>
+
+    <string name="info_description">ನಿಮ್ಮ GPS ಸ್ಥಳವನ್ನು ನಕಲಿಸಲು ಸರಳ Android ಅಪ್ಲಿಕೇಶನ್. ನಕ್ಷೆಯಲ್ಲಿ ಯಾವುದೇ ಸ್ಥಳವನ್ನು ಹೊಂದಿಸಿ ಅಥವಾ ಸ್ವಯಂಚಾಲಿತ ಚಲನೆಯ ಸ್ಕ್ರಿಪ್ಟ್‌ಗಳನ್ನು ಚಲಾಯಿಸಿ.</string>
+    <string name="info_version_label">ಆವೃತ್ತಿ</string>
+    <string name="info_developer_label">ಅಭಿವೃದ್ಧಿಕಾರ</string>
+    <string name="info_developer_name">BlackGhost</string>
+    <string name="info_github_label">GitHub</string>
+    <string name="info_repo_label">ರೆಪೊಸಿಟರಿ</string>
+    <string name="info_opensource_label">ಓಪನ್ ಸೋರ್ಸ್</string>
+    <string name="info_opensource_value">ಹೌದು</string>
+    <string name="info_section_about">ಕುರಿತು</string>
+    <string name="info_section_links">ಲಿಂಕ್‌ಗಳು</string>
+
+
+    <string name="script_start_button">ಪ್ರಾರಂಭಿಸಿ</string>
+    <string name="script_default_location">!23.456, 123.456</string>
+
+    <string name="map_my_location_btn_description">ನನ್ನ ಸ್ಥಳ</string>
+    <string name="map_search_hint">ಸ್ಥಳವನ್ನು ಹುಡುಕಿ…</string>
+
+    <string name="toast_test">TEST----IN</string>
+    <string name="toast_set_location">ಸ್ಥಳವನ್ನು ಹೊಂದಿಸಿ</string>
+    <string name="toast_location_not_found">ಸ್ಥಳ ಸಿಗಲಿಲ್ಲ</string>
+    <string name="toast_error_finding_location">ಸ್ಥಳವನ್ನು ಹುಡುಕುವಲ್ಲಿ ದೋಷ</string>
+    <string name="toast_location_permission_required">ಸ್ಥಳ ಅನುಮತಿ ಅಗತ್ಯವಿದೆ!</string>
+    <string name="toast_unable_to_retrieve_location">ಪ್ರಸ್ತುತ ಸ್ಥಳವನ್ನು ಪಡೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ</string>
+
+    <string name="preferences_language_title">ಭಾಷೆ</string>
+    <string name="preferences_language_summary">ನಿಮ್ಮ ಆದ್ಯತೆಯ ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ</string>
+    <string name="language_system_default">ಸಿಸ್ಟಮ್ ಡೀಫಾಲ್ಟ್</string>
+    <string name="preferences_dark_theme_title">ಡಾರ್ಕ್ ಥೀಮ್</string>
+    <string name="preferences_dark_theme_summary">ಲೈಟ್ ಮತ್ತು ಡಾರ್ಕ್ ಮೋಡ್ ನಡುವೆ ಬದಲಾಯಿಸಿ.</string>
+    <string name="preferences_save_map_title">ನಕ್ಷೆಯನ್ನು ಉಳಿಸಿ</string>
+    <string name="preferences_save_map_summary">ಕೊನೆಯ ಸ್ಥಾನ, ಝೂಮ್ ಮತ್ತು ತಿರುಗುವಿಕೆಯನ್ನು ಉಳಿಸಿ.</string>
+</resources>
