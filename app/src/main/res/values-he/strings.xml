@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Fake GPS</string>
+    <string name="app_version">0.1</string>
+
+    <string name="gitHubUrl">https://github.com/BlackGhost0051</string>
+    <string name="gitHubRepoUrl">https://github.com/BlackGhost0051/FakeGPS</string>
+
+    <string name="open">פתח</string>
+    <string name="close">סגור</string>
+
+    <string name="menu_map">מפה</string>
+    <string name="menu_script">סקריפט</string>
+    <string name="menu_settings">הגדרות</string>
+    <string name="menu_info">מידע</string>
+
+    <string name="info_description">אפליקציית אנדרואיד פשוטה לזיוף מיקום GPS. הגדר כל מיקום על המפה או הפעל סקריפטים אוטומטיים לתנועה.</string>
+    <string name="info_version_label">גרסה</string>
+    <string name="info_developer_label">מפתח</string>
+    <string name="info_developer_name">BlackGhost</string>
+    <string name="info_github_label">GitHub</string>
+    <string name="info_repo_label">מאגר</string>
+    <string name="info_opensource_label">קוד פתוח</string>
+    <string name="info_opensource_value">כן</string>
+    <string name="info_section_about">אודות</string>
+    <string name="info_section_links">קישורים</string>
+
+
+    <string name="script_start_button">התחל</string>
+    <string name="script_default_location">!23.456, 123.456</string>
+
+    <string name="map_my_location_btn_description">המיקום שלי</string>
+    <string name="map_search_hint">חפש מיקום…</string>
+
+    <string name="toast_test">TEST----IN</string>
+    <string name="toast_set_location">הגדר מיקום</string>
+    <string name="toast_location_not_found">המיקום לא נמצא</string>
+    <string name="toast_error_finding_location">שגיאה בחיפוש מיקום</string>
+    <string name="toast_location_permission_required">נדרשת הרשאת מיקום!</string>
+    <string name="toast_unable_to_retrieve_location">לא ניתן לאחזר את המיקום הנוכחי</string>
+
+    <string name="preferences_language_title">שפה</string>
+    <string name="preferences_language_summary">בחר את השפה המועדפת עליך</string>
+    <string name="language_system_default">ברירת מחדל של המערכת</string>
+    <string name="preferences_dark_theme_title">ערכת נושא כהה</string>
+    <string name="preferences_dark_theme_summary">עבור בין מצב בהיר לכהה.</string>
+    <string name="preferences_save_map_title">שמור מפה</string>
+    <string name="preferences_save_map_summary">שמור מיקום אחרון, זום וסיבוב.</string>
+</resources>
