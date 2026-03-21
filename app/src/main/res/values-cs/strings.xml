@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Fake GPS</string>
+    <string name="app_version">0.1</string>
+
+    <string name="gitHubUrl">https://github.com/BlackGhost0051</string>
+    <string name="gitHubRepoUrl">https://github.com/BlackGhost0051/FakeGPS</string>
+
+    <string name="open">otevřít</string>
+    <string name="close">zavřít</string>
+
+    <string name="menu_map">Mapa</string>
+    <string name="menu_script">Skript</string>
+    <string name="menu_settings">Nastavení</string>
+    <string name="menu_info">Informace</string>
+
+    <string name="info_description">Jednoduchá aplikace pro Android k falšování vaší GPS polohy. Nastavte jakoukoli polohu na mapě nebo spusťte automatizované skripty pohybu.</string>
+    <string name="info_version_label">Verze</string>
+    <string name="info_developer_label">Vývojář</string>
+    <string name="info_developer_name">BlackGhost</string>
+    <string name="info_github_label">GitHub</string>
+    <string name="info_repo_label">Repozitář</string>
+    <string name="info_opensource_label">Open Source</string>
+    <string name="info_opensource_value">Ano</string>
+    <string name="info_section_about">O aplikaci</string>
+    <string name="info_section_links">Odkazy</string>
+
+
+    <string name="script_start_button">Start</string>
+    <string name="script_default_location">!23.456, 123.456</string>
+
+    <string name="map_my_location_btn_description">Moje poloha</string>
+    <string name="map_search_hint">Hledat polohu…</string>
+
+    <string name="toast_test">TEST----IN</string>
+    <string name="toast_set_location">Nastavit polohu</string>
+    <string name="toast_location_not_found">Poloha nenalezena</string>
+    <string name="toast_error_finding_location">Chyba při hledání polohy</string>
+    <string name="toast_location_permission_required">Vyžadováno oprávnění k poloze!</string>
+    <string name="toast_unable_to_retrieve_location">Nelze získat aktuální polohu</string>
+
+    <string name="preferences_language_title">Jazyk</string>
+    <string name="preferences_language_summary">Vyberte preferovaný jazyk</string>
+    <string name="language_system_default">Výchozí nastavení systému</string>
+    <string name="preferences_dark_theme_title">Tmavý motiv</string>
+    <string name="preferences_dark_theme_summary">Přepínat mezi světlým a tmavým režimem.</string>
+    <string name="preferences_save_map_title">Uložit mapu</string>
+    <string name="preferences_save_map_summary">Uložit poslední pozici, přiblížení a rotaci.</string>
+</resources>

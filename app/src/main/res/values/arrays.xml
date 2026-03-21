@@ -34,6 +34,7 @@
         <item>اردو</item>
         <item>Tiếng Việt</item>
         <item>中文</item>
+        <item>Čeština</item>
         <item>@string/language_system_default</item>
     </string-array>
 
@@ -71,6 +72,7 @@
         <item>ur</item>
         <item>vi</item>
         <item>zh</item>
+        <item>cs</item>
         <item>system</item>
     </string-array>
 </resources>
