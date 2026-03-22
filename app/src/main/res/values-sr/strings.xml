@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Fake GPS</string>
+    <string name="app_version">0.1</string>
+
+    <string name="gitHubUrl">https://github.com/BlackGhost0051</string>
+    <string name="gitHubRepoUrl">https://github.com/BlackGhost0051/FakeGPS</string>
+
+    <string name="open">отвори</string>
+    <string name="close">затвори</string>
+
+    <string name="menu_map">Мапа</string>
+    <string name="menu_script">Скрипта</string>
+    <string name="menu_settings">Подешавања</string>
+    <string name="menu_info">Информације</string>
+
+    <string name="info_description">Једноставна Android апликација за лажирање ваше GPS локације. Поставите било коју локацију на мапи или покрените аутоматизоване скрипте кретања.</string>
+    <string name="info_version_label">Верзија</string>
+    <string name="info_developer_label">Програмер</string>
+    <string name="info_developer_name">BlackGhost</string>
+    <string name="info_github_label">GitHub</string>
+    <string name="info_repo_label">Репозиторијум</string>
+    <string name="info_opensource_label">Отворени код</string>
+    <string name="info_opensource_value">Да</string>
+    <string name="info_section_about">О апликацији</string>
+    <string name="info_section_links">Везе</string>
+
+
+    <string name="script_start_button">Старт</string>
+    <string name="script_default_location">!23.456, 123.456</string>
+
+    <string name="map_my_location_btn_description">Моја локација</string>
+    <string name="map_search_hint">Претражи локацију…</string>
+
+    <string name="toast_test">TEST----IN</string>
+    <string name="toast_set_location">Постави локацију</string>
+    <string name="toast_location_not_found">Локација није пронађена</string>
+    <string name="toast_error_finding_location">Грешка при проналажењу локације</string>
+    <string name="toast_location_permission_required">Потребна је дозвола за локацију!</string>
+    <string name="toast_unable_to_retrieve_location">Није могуће преузети тренутну локацију</string>
+
+    <string name="preferences_language_title">Језик</string>
+    <string name="preferences_language_summary">Изаберите жељени језик</string>
+    <string name="language_system_default">Подразумевано системско</string>
+    <string name="preferences_dark_theme_title">Тамна тема</string>
+    <string name="preferences_dark_theme_summary">Пребацивање између светлог и тамног режима.</string>
+    <string name="preferences_save_map_title">Сачувај мапу</string>
+    <string name="preferences_save_map_summary">Сачувај последњу позицију, зум и ротацију.</string>
+</resources>
