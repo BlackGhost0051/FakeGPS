@@ -36,6 +36,7 @@
         <item>中文</item>
         <item>Čeština</item>
         <item>Magyar</item>
+        <item>Български</item>
         <item>@string/language_system_default</item>
     </string-array>
 
@@ -75,6 +76,7 @@
         <item>zh</item>
         <item>cs</item>
         <item>hu</item>
+        <item>bg</item>
         <item>system</item>
     </string-array>
 </resources>
