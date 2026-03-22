@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Fake GPS</string>
+    <string name="app_version">0.1</string>
+
+    <string name="gitHubUrl">https://github.com/BlackGhost0051</string>
+    <string name="gitHubRepoUrl">https://github.com/BlackGhost0051/FakeGPS</string>
+
+    <string name="open">megnyitás</string>
+    <string name="close">bezárás</string>
+
+    <string name="menu_map">Térkép</string>
+    <string name="menu_script">Szkript</string>
+    <string name="menu_settings">Beállítások</string>
+    <string name="menu_info">Információ</string>
+
+    <string name="info_description">Egyszerű Android alkalmazás a GPS helyzet hamisításához. Állítson be bármilyen helyet a térképen, vagy futtasson automatizált mozgási szkripteket.</string>
+    <string name="info_version_label">Verzió</string>
+    <string name="info_developer_label">Fejlesztő</string>
+    <string name="info_developer_name">BlackGhost</string>
+    <string name="info_github_label">GitHub</string>
+    <string name="info_repo_label">Tárhely</string>
+    <string name="info_opensource_label">Nyílt forráskódú</string>
+    <string name="info_opensource_value">Igen</string>
+    <string name="info_section_about">Névjegy</string>
+    <string name="info_section_links">Hivatkozások</string>
+
+
+    <string name="script_start_button">Indítás</string>
+    <string name="script_default_location">!23.456, 123.456</string>
+
+    <string name="map_my_location_btn_description">Saját hely</string>
+    <string name="map_search_hint">Hely keresése…</string>
+
+    <string name="toast_test">TEST----IN</string>
+    <string name="toast_set_location">Hely beállítása</string>
+    <string name="toast_location_not_found">A hely nem található</string>
+    <string name="toast_error_finding_location">Hiba a hely keresésekor</string>
+    <string name="toast_location_permission_required">Helymeghatározási engedély szükséges!</string>
+    <string name="toast_unable_to_retrieve_location">Nem sikerült lekérni az aktuális helyet</string>
+
+    <string name="preferences_language_title">Nyelv</string>
+    <string name="preferences_language_summary">Válassza ki az előnyben részesített nyelvet</string>
+    <string name="language_system_default">Rendszer alapértelmezett</string>
+    <string name="preferences_dark_theme_title">Sötét téma</string>
+    <string name="preferences_dark_theme_summary">Váltás a világos és sötét mód között.</string>
+    <string name="preferences_save_map_title">Térkép mentése</string>
+    <string name="preferences_save_map_summary">Utolsó pozíció, nagyítás és forgatás mentése.</string>
+</resources>

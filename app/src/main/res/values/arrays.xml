@@ -35,6 +35,7 @@
         <item>Tiếng Việt</item>
         <item>中文</item>
         <item>Čeština</item>
+        <item>Magyar</item>
         <item>@string/language_system_default</item>
     </string-array>
 
@@ -73,6 +74,7 @@
         <item>vi</item>
         <item>zh</item>
         <item>cs</item>
+        <item>hu</item>
         <item>system</item>
     </string-array>
 </resources>
