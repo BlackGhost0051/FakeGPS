@@ -38,6 +38,7 @@
         <item>Magyar</item>
         <item>Български</item>
         <item>Српски</item>
+        <item>فارسی</item>
         <item>@string/language_system_default</item>
     </string-array>
 
@@ -79,6 +80,7 @@
         <item>hu</item>
         <item>bg</item>
         <item>sr</item>
+        <item>fa</item>
         <item>system</item>
     </string-array>
 </resources>

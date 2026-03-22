@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Fake GPS</string>
+    <string name="app_version">0.1</string>
+
+    <string name="gitHubUrl">https://github.com/BlackGhost0051</string>
+    <string name="gitHubRepoUrl">https://github.com/BlackGhost0051/FakeGPS</string>
+
+    <string name="open">باز کردن</string>
+    <string name="close">بستن</string>
+
+    <string name="menu_map">نقشه</string>
+    <string name="menu_script">اسکریپت</string>
+    <string name="menu_settings">تنظیمات</string>
+    <string name="menu_info">اطلاعات</string>
+
+    <string name="info_description">یک برنامه ساده اندروید برای جعل موقعیت GPS شما. هر موقعیتی را روی نقشه تنظیم کنید یا اسکریپت‌های حرکت خودکار را اجرا کنید.</string>
+    <string name="info_version_label">نسخه</string>
+    <string name="info_developer_label">توسعه‌دهنده</string>
+    <string name="info_developer_name">BlackGhost</string>
+    <string name="info_github_label">گیت‌هاب</string>
+    <string name="info_repo_label">مخزن</string>
+    <string name="info_opensource_label">متن‌باز</string>
+    <string name="info_opensource_value">بله</string>
+    <string name="info_section_about">درباره</string>
+    <string name="info_section_links">پیوندها</string>
+
+
+    <string name="script_start_button">شروع</string>
+    <string name="script_default_location">!23.456, 123.456</string>
+
+    <string name="map_my_location_btn_description">موقعیت من</string>
+    <string name="map_search_hint">جستجوی موقعیت…</string>
+
+    <string name="toast_test">TEST----IN</string>
+    <string name="toast_set_location">تنظیم موقعیت</string>
+    <string name="toast_location_not_found">موقعیت یافت نشد</string>
+    <string name="toast_error_finding_location">خطا در یافتن موقعیت</string>
+    <string name="toast_location_permission_required">مجوز موقعیت مکانی لازم است!</string>
+    <string name="toast_unable_to_retrieve_location">قادر به بازیابی موقعیت فعلی نیست</string>
+
+    <string name="preferences_language_title">زبان</string>
+    <string name="preferences_language_summary">زبان ترجیحی خود را انتخاب کنید</string>
+    <string name="language_system_default">پیش‌فرض سیستم</string>
+    <string name="preferences_dark_theme_title">تم تیره</string>
+    <string name="preferences_dark_theme_summary">تغییر بین حالت روشن و تیره.</string>
+    <string name="preferences_save_map_title">ذخیره نقشه</string>
+    <string name="preferences_save_map_summary">ذخیره آخرین موقعیت، زوم و چرخش.</string>
+</resources>
