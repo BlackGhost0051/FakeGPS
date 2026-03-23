@@ -46,6 +46,10 @@ public class MapManager {
 
                 mapLibreMap.getUiSettings().setRotateGesturesEnabled(rotateGestures);
 
+                mapLibreMap.getUiSettings().setCompassEnabled(false);
+                mapLibreMap.getUiSettings().setLogoEnabled(false);
+                mapLibreMap.getUiSettings().setAttributionEnabled(false);
+
                 CameraPosition initialPosition = new CameraPosition.Builder()
                         .target(startPosition)
                         .zoom(startZoomLevel)
