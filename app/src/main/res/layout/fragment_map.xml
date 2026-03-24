@@ -14,6 +14,35 @@
         app:maplibre_uiLogo="false"
         />
 
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/my_location_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/btnZoomIn"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+        <ImageButton
+            android:id="@+id/btnZoomOut"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+        <ImageButton
+            android:id="@+id/btnLayers"
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
+
+
+    </LinearLayout>
+
+
     <ImageButton
         android:id="@+id/my_location_btn"
 
@@ -31,17 +60,17 @@
         android:layout_height="50dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="15dp"
-        android:layout_marginEnd="50dp"
+        android:layout_marginEnd="30dp"
         android:autofillHints=""
         android:background="@drawable/round_white_edit_text"
         android:drawableStart="@drawable/search_24"
         android:drawablePadding="8dp"
+        android:hint="@string/map_search_hint"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:maxLines="1"
         android:paddingStart="12dp"
         android:paddingEnd="12dp"
-        android:hint="@string/map_search_hint"
-        android:inputType="text"
-        android:imeOptions="actionSearch"
-        android:maxLines="1"
         android:textColor="@color/black"
 
         app:layout_constraintEnd_toEndOf="parent"
