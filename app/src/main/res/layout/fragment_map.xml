@@ -32,7 +32,10 @@
         <ImageButton
             android:id="@+id/btnZoomOut"
             android:layout_width="50dp"
-            android:layout_height="50dp" />
+            android:layout_height="50dp"
+            android:src="@drawable/add_24"
+            android:background="@color/white"
+            />
 
         <ImageButton
             android:id="@+id/btnLayers"
