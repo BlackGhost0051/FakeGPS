@@ -67,7 +67,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                app:cardCornerRadius="8dp"
                 app:cardElevation="2dp">
 
                 <LinearLayout
@@ -108,7 +107,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal"
-                        android:paddingBottom="12dp">
+                        android:paddingBottom="0dp">
 
                         <TextView
                             android:layout_width="0dp"
@@ -121,6 +120,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/info_developer_name" />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/accessible_forward_24"
+                            />
                     </LinearLayout>
 
                     <!-- Divider -->
@@ -166,7 +170,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                app:cardCornerRadius="8dp"
                 app:cardElevation="2dp">
 
                 <LinearLayout
