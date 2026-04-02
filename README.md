@@ -38,11 +38,3 @@ The Settings Fragment offers customization options for the Fake GPS application,
 ### Info
 
 Displays application information and developer details.
-
-
-
-
-[//]: # ( TODD: map search)
-[//]: # ( TODD: script logic in json format)
-[//]: # ( TODD: app must work in 24/7 add parametr in setting ( need to make auto scripts )
-[//]: # ( TODD: add info datails, connect subscription )
