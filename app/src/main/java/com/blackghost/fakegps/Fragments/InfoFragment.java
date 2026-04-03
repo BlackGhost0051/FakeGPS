@@ -27,10 +27,8 @@ public class InfoFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_info, container, false);
 
         TextView tvGithub = view.findViewById(R.id.tv_github);
-        TextView tvRepo = view.findViewById(R.id.tv_repo);
 
         tvGithub.setOnClickListener(v -> openUrl(getString(R.string.gitHubUrl)));
-        tvRepo.setOnClickListener(v -> openUrl(getString(R.string.gitHubRepoUrl)));
 
         return view;
     }
