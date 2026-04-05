@@ -1,9 +1,14 @@
 package com.blackghost.fakegps;
 
 import android.Manifest;
+import android.content.ComponentName;
+import android.content.Intent;
+import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.preference.PreferenceManager;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -28,6 +33,7 @@ import com.blackghost.fakegps.Fragments.ScriptFragment;
 import com.blackghost.fakegps.Fragments.SettingsFragment;
 import com.blackghost.fakegps.Interfaces.MainActivityInterface;
 import com.blackghost.fakegps.Managers.FakeGPSManager;
+import com.blackghost.fakegps.Services.FakeGpsService;
 import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity implements MainActivityInterface {
@@ -36,6 +42,32 @@ public class MainActivity extends AppCompatActivity implements MainActivityInter
     private Toolbar toolbar;
     private NavigationView navigationView;
     private FakeGPSManager fakeGPSManager;
+
+    private FakeGpsService fakeGpsService;
+    private boolean bound = false;
+
+    private final ServiceConnection connection =
+            new ServiceConnection() {
+
+                @Override
+                public void onServiceConnected(
+                        ComponentName name,
+                        IBinder service
+                ) {
+
+                    FakeGpsService.LocalBinder binder =
+                            (FakeGpsService.LocalBinder) service;
+
+                    fakeGpsService = binder.getService();
+
+                    bound = true;
+                }
+
+                @Override
+                public void onServiceDisconnected(ComponentName name) {
+                    bound = false;
+                }
+            };
 
     @Override
     protected void onDestroy() {
@@ -54,6 +86,16 @@ public class MainActivity extends AppCompatActivity implements MainActivityInter
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Intent intent = new Intent(this, FakeGpsService.class);
+
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            startForegroundService(intent);
+        } else {
+            startService(intent);
+        }
+
 
         drawerLayout = findViewById(R.id.drawerLayout);
         toolbar = findViewById(R.id.toolbar);
@@ -107,6 +149,27 @@ public class MainActivity extends AppCompatActivity implements MainActivityInter
         });
 
     }
+
+    @Override
+    protected void onStart(){
+        super.onStart();
+
+        Intent intent = new Intent(this, FakeGpsService.class);
+
+        bindService(intent, connection, BIND_AUTO_CREATE);
+    }
+    @Override
+    protected void onStop(){
+        super.onStop();
+
+        super.onStop();
+
+        if (bound) {
+            unbindService(connection);
+            bound = false;
+        }
+    }
+
 
     public FakeGPSManager getFakeGPSManager() {
         return fakeGPSManager;
